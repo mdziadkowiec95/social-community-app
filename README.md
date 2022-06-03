@@ -1,1 +1,1 @@
-# social-community-app
+Social Community App
