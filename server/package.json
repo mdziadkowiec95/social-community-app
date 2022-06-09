@@ -5,9 +5,10 @@
   "main": "index.js",
   "scripts": {
     "dev": "ts-node-dev --transpile-only --no-notify --exit-child ./src/server.ts",
-    "lint": "eslint ./src/**/*.ts",
-    "format": "eslint ./src/**/*.ts --fix",
-    "prettier-format": "prettier '**/*.ts' --write",
+    "lint": "eslint **/*.ts",
+    "format": "eslint **/*.ts --fix",
+    "prettier-format": "prettier **/*.ts --write",
+    "format-and-verify": "npm run prettier-format && npm run lint",
     "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

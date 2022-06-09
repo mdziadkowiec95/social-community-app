@@ -5,6 +5,7 @@ import { Logger } from './services/logger.service';
 connectDB();
 
 const user = new User({ firstName: 'Mike' });
+Logger.info('hello');
 
 user
   .save()
