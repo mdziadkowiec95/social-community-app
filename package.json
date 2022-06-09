@@ -1,0 +1,33 @@
+{
+  "name": "social-community-app",
+  "version": "1.0.0",
+  "description": "Social Community App readme",
+  "main": "index.js",
+  "scripts": {
+    "server:dev": "cd server && npm run dev",
+    "build-server": "cd server && npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mdziadkowiec95/social-community-app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mdziadkowiec95/social-community-app/issues"
+  },
+  "lint-staged": {
+    "*.ts": "cd server && npm run lint"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "homepage": "https://github.com/mdziadkowiec95/social-community-app#readme",
+  "devDependencies": {
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.1"
+  }
+}
