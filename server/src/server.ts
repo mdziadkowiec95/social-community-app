@@ -2,9 +2,10 @@ import { ApolloServer } from 'apollo-server';
 import { connectDB } from './db/connect';
 import { User } from './models/User.model';
 import { resolvers } from './resolvers';
-import { Logger } from './services/logger.service';
+import { LoggerService } from './services/logger.service';
 import { readFileSync } from 'fs';
 import { ExpressContext } from 'apollo-server-express';
+import { UserService } from './services/user.service';
 
 runServer();
 
@@ -14,6 +15,9 @@ const context = ({ req }: ExpressContext) => {
 
   return {
     user,
+    services: {
+      UserService: new UserService(),
+    },
     models: {
       User,
     },
@@ -36,6 +40,6 @@ async function runServer() {
 
   // The `listen` method launches a web server.
   server.listen().then(({ url }) => {
-    Logger.info(`🚀  Server ready at ${url}`);
+    LoggerService.info(`🚀  Server ready at ${url}`);
   });
 }
