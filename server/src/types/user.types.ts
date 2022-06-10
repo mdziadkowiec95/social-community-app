@@ -2,6 +2,6 @@ export interface UserSchema {
   firstName: string;
   lastName: string;
   age: number;
-  city: string;
+  city?: string;
   country: string;
 }

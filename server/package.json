@@ -4,9 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "ts-node-dev --transpile-only --no-notify --exit-child ./src/server.ts",
+    "dev": "concurrently \"ts-node-dev --transpile-only --no-notify --exit-child ./src/server.ts\" \"npm run generate:watch\"",
     "lint": "eslint **/*.ts",
     "format": "eslint **/*.ts --fix",
+    "generate": "graphql-codegen",
+    "generate:watch": "graphql-codegen --watch",
     "prettier-format": "prettier **/*.ts --write",
     "format-and-verify": "npm run prettier-format && npm run lint",
     "build": "tsc",
@@ -15,12 +17,18 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@graphql-codegen/cli": "^2.6.2",
+    "@graphql-codegen/typescript": "^2.5.0",
+    "@graphql-codegen/typescript-resolvers": "^2.6.5",
+    "apollo-server": "^3.8.2",
+    "graphql": "^16.5.0",
     "mongoose": "^6.3.6",
     "winston": "^3.7.2"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.27.1",
     "@typescript-eslint/parser": "^5.27.1",
+    "concurrently": "^7.2.1",
     "eslint": "^8.17.0",
     "nodemon": "^2.0.16",
     "prettier": "^2.6.2",
