@@ -17,11 +17,20 @@ type NewUserResult {
   authToken: String!
 }
 
+type SignInResult {
+  authToken: String!
+}
+
 type Community {
   _id: ID!
   createdBy: User!
   name: String!
   description: String
+}
+
+input SignInInput {
+  email: String!
+  password: String!
 }
 
 input NewUserInput {
@@ -44,4 +53,5 @@ type Query {
 
 type Mutation {
   newUser(input: NewUserInput!): NewUserResult!
+  signIn(input: SignInInput!): SignInResult!
 }

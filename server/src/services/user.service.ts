@@ -7,20 +7,21 @@ class UserService {
   /**
    * Enrypt user password
    */
-  async encryptPassword(password: string): Promise<string> {
+  public async encryptPassword(password: string): Promise<string> {
     const salt = await genSalt(10);
+
     return await hash(password, salt);
   }
   /**
    * Compare user passowrd with enrypted passowrd from DB
    */
-  async comparePasswords(password: string, hashedPassword: string): Promise<boolean> {
+  public async comparePasswords(password: string, hashedPassword: string): Promise<boolean> {
     return compare(password, hashedPassword);
   }
   /**
    * Generate JWT for given payload
    */
-  createJSONWebToken(payload: object): string {
+  public createJSONWebToken(payload: object): string {
     return sign(payload, PRIVATE_KEY, {
       expiresIn: 12 * 3600,
     });
@@ -28,7 +29,7 @@ class UserService {
   /**
    * Verify if provided JWT is vaild
    */
-  verifyJSONWebToken(token: string): string | JwtPayload {
+  public verifyJSONWebToken(token: string): string | JwtPayload {
     return verify(token, PRIVATE_KEY);
   }
 }

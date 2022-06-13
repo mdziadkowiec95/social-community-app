@@ -500,3 +500,105 @@
 {"extensions":{},"message":"Email \"test551125@test.com\" is already taken."}
 {"level":"info","message":"newUser mutation {\"firstName\":\"wd\",\"lastName\":\"sd\",\"dateOfBirth\":\"26\",\"city\":\"Krakow\",\"country\":\"Poland\",\"avatar\":null,\"email\":\"test551125@test.com\",\"password\":\"asdasdasd\",\"passwordConfirmation\":\"asdasdasd\"}"}
 {"extensions":{},"message":"Email \"test551125@test.com\" is already taken."}
+{"level":"info","message":"DB connected successfully!"}
+{"level":"info","message":"🚀  Server ready at http://localhost:4000/"}
+{"level":"info","message":"DB connected successfully!"}
+{"level":"info","message":"🚀  Server ready at http://localhost:4000/"}
+{"level":"info","message":"DB connected successfully!"}
+{"level":"info","message":"DB connected successfully!"}
+{"level":"info","message":"DB connected successfully!"}
+{"level":"info","message":"🚀  Server ready at http://localhost:4000/"}
+{"level":"info","message":"DB connected successfully!"}
+{"level":"info","message":"🚀  Server ready at http://localhost:4000/"}
+{"level":"info","message":"DB connected successfully!"}
+{"level":"info","message":"🚀  Server ready at http://localhost:4000/"}
+{"level":"info","message":"DB connected successfully!"}
+{"level":"info","message":"🚀  Server ready at http://localhost:4000/"}
+{"level":"info","message":"signIn mutation {\"email\":\"test551125@test.com\",\"password\":\"asdasdasd\"}"}
+{"level":"info","message":"DB connected successfully!"}
+{"level":"info","message":"🚀  Server ready at http://localhost:4000/"}
+{"level":"info","message":"DB connected successfully!"}
+{"level":"info","message":"🚀  Server ready at http://localhost:4000/"}
+{"level":"info","message":"DB connected successfully!"}
+{"level":"info","message":"🚀  Server ready at http://localhost:4000/"}
+{"level":"info","message":"signIn mutation {\"email\":\"test551125@test.com\",\"password\":\"asdasdasd\"}"}
+{"extensions":{"code":"BAD_USER_INPUT"},"message":"User with email \"test551125@test.com\" does not exist."}
+{"level":"info","message":"signIn mutation {\"email\":\"test551125@test.com\",\"password\":\"asdasdasd\"}"}
+{"extensions":{"code":"BAD_USER_INPUT"},"message":"User with email \"test551125@test.com\" does not exist."}
+{"level":"info","message":"signIn mutation {\"email\":\"test551125@test.com\",\"password\":\"asdasdasd\"}"}
+{"extensions":{"code":"BAD_USER_INPUT"},"message":"User with email \"test551125@test.com\" does not exist."}
+{"level":"info","message":"signIn mutation {\"email\":\"test551125@test.com\",\"password\":\"asdasdasd\"}"}
+{"extensions":{"code":"BAD_USER_INPUT"},"message":"User with email \"test551125@test.com\" does not exist."}
+{"level":"info","message":"signIn mutation {\"email\":\"test551125@test.com\",\"password\":\"asdasdasd\"}"}
+{"extensions":{"code":"BAD_USER_INPUT"},"message":"User with email \"test551125@test.com\" does not exist."}
+{"level":"info","message":"newUser mutation {\"firstName\":\"First\",\"lastName\":\"User\",\"dateOfBirth\":\"26\",\"city\":\"Krakow\",\"country\":\"Poland\",\"avatar\":null,\"email\":\"user1@mailinator.com\",\"password\":\"123123123\",\"passwordConfirmation\":\"123123123\"}"}
+{"level":"info","message":"signIn mutation {\"email\":\"user1@mailinator.com\",\"password\":\"asdasdasd\"}"}
+{"extensions":{"code":"BAD_USER_INPUT"},"message":"User with email \"user1@mailinator.com\" does not exist."}
+{"level":"info","message":"signIn mutation {\"email\":\"user1@mailinator.com\",\"password\":\"asdasdasd\"}"}
+{"extensions":{"code":"BAD_USER_INPUT"},"message":"User with email \"user1@mailinator.com\" does not exist."}
+{"level":"info","message":"signIn mutation {\"email\":\"user1@mailinator.com\",\"password\":\"asdasdasd\"}"}
+{"extensions":{"code":"BAD_USER_INPUT"},"message":"User with email \"user1@mailinator.com\" does not exist."}
+{"level":"info","message":"DB connected successfully!"}
+{"level":"info","message":"🚀  Server ready at http://localhost:4000/"}
+{"level":"info","message":"signIn mutation {\"email\":\"user1@mailinator.com\",\"password\":\"asdasdasd\"}"}
+{"extensions":{"code":"BAD_USER_INPUT"},"message":"Provided credentials are invalid."}
+{"level":"info","message":"signIn mutation {\"email\":\"user1@mailinator.com\",\"password\":\"123123123\"}"}
+{"extensions":{"code":"BAD_USER_INPUT"},"message":"Provided credentials are invalid."}
+{"level":"info","message":"signIn mutation {\"email\":\"user1@mailinator.com\",\"password\":\"123123123\"}"}
+{"extensions":{"code":"BAD_USER_INPUT"},"message":"Provided credentials are invalid."}
+{"level":"info","message":"signIn mutation {\"email\":\"user1@mailinator.com\",\"password\":\"123123123\"}"}
+{"extensions":{"code":"BAD_USER_INPUT"},"message":"Provided credentials are invalid."}
+{"level":"info","message":"DB connected successfully!"}
+{"level":"info","message":"🚀  Server ready at http://localhost:4000/"}
+{"level":"info","message":"signIn mutation {\"email\":\"user1@mailinator.com\",\"password\":\"123123123\"}"}
+{"level":"info","message":"signIn mutation {\"email\":\"user1@mailinator.com\",\"password\":\"123123123\"}"}
+{"level":"info","message":"signIn mutation {\"email\":\"user1@mailinator.com\",\"password\":\"123123123\"}"}
+{"level":"info","message":"DB connected successfully!"}
+{"level":"info","message":"🚀  Server ready at http://localhost:4000/"}
+{"level":"info","message":"DB connected successfully!"}
+{"level":"info","message":"🚀  Server ready at http://localhost:4000/"}
+{"level":"info","message":"DB connected successfully!"}
+{"level":"info","message":"🚀  Server ready at http://localhost:4000/"}
+{"level":"info","message":"DB connected successfully!"}
+{"level":"info","message":"🚀  Server ready at http://localhost:4000/"}
+{"level":"info","message":"DB connected successfully!"}
+{"level":"info","message":"🚀  Server ready at http://localhost:4000/"}
+{"level":"info","message":"DB connected successfully!"}
+{"level":"info","message":"🚀  Server ready at http://localhost:4000/"}
+{"level":"info","message":"DB connected successfully!"}
+{"level":"info","message":"🚀  Server ready at http://localhost:4000/"}
+{"level":"info","message":"DB connected successfully!"}
+{"level":"info","message":"🚀  Server ready at http://localhost:4000/"}
+{"level":"info","message":"DB connected successfully!"}
+{"level":"info","message":"🚀  Server ready at http://localhost:4000/"}
+{"level":"info","message":"DB connected successfully!"}
+{"level":"info","message":"🚀  Server ready at http://localhost:4000/"}
+{"level":"info","message":"signIn mutation {\"email\":\"user1@mailinator.com\",\"password\":\"123123123\"}"}
+{"level":"info","message":"signIn mutation {\"email\":\"user1@mailinator.com\",\"password\":\"123123123\"}"}
+{"level":"info","message":"DB connected successfully!"}
+{"level":"info","message":"🚀  Server ready at http://localhost:4000/"}
+{"level":"info","message":"signIn mutation {\"email\":\"user1@mailinator.com\",\"password\":\"123123123\"}"}
+{"level":"info","message":"signIn mutation {\"email\":\"user1@mailinator.com\",\"password\":\"123123123\"}"}
+{"level":"info","message":"signIn mutation {\"email\":\"user1@mailinator.com\",\"password\":\"123123123\"}"}
+{"level":"info","message":"DB connected successfully!"}
+{"level":"info","message":"🚀  Server ready at http://localhost:4000/"}
+{"level":"info","message":"signIn mutation [object Object]"}
+{"level":"info","message":"signIn mutation [object Object]"}
+2022-06-13T15:35:14.704Z [undefined] info: DB connected successfully!
+2022-06-13T15:35:14.791Z [undefined] info: 🚀  Server ready at http://localhost:4000/
+2022-06-13T15:35:17.874Z [undefined] info: signIn mutation [object Object]
+2022-06-13T15:35:26.720Z [undefined] info: DB connected successfully!
+2022-06-13T15:35:26.802Z [undefined] info: 🚀  Server ready at http://localhost:4000/
+2022-06-13T15:36:33.181Z [INFO]: DB connected successfully!
+2022-06-13T15:36:33.267Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-13T15:36:38.092Z [INFO]: DB connected successfully!
+2022-06-13T15:36:38.175Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-13T15:36:42.218Z [INFO]: signIn mutation {"email":"user1@mailinator.com","password":"123123123"}
+2022-06-13T15:36:59.433Z [INFO]: signIn mutation {"email":"user1@mailinator.com","password":"123123123"}
+2022-06-13T15:37:08.926Z [INFO]: DB connected successfully!
+2022-06-13T15:37:09.020Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-13T15:37:20.154Z [INFO]: signIn mutation {"email":"user1@mailinator.com","password":"123123123"}
+2022-06-13T15:37:34.512Z [INFO]: DB connected successfully!
+2022-06-13T15:37:34.595Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-13T15:39:27.275Z [INFO]: DB connected successfully!
+2022-06-13T15:39:27.365Z [INFO]: 🚀  Server ready at http://localhost:4000/

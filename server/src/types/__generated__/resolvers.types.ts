@@ -26,11 +26,17 @@ export type Community = {
 export type Mutation = {
   __typename?: 'Mutation';
   newUser: NewUserResult;
+  signIn: SignInResult;
 };
 
 
 export type MutationNewUserArgs = {
   input: NewUserInput;
+};
+
+
+export type MutationSignInArgs = {
+  input: SignInInput;
 };
 
 export type NewUserInput = {
@@ -54,6 +60,16 @@ export type Query = {
   __typename?: 'Query';
   communities: Array<Maybe<Community>>;
   users: Array<Maybe<User>>;
+};
+
+export type SignInInput = {
+  email: Scalars['String'];
+  password: Scalars['String'];
+};
+
+export type SignInResult = {
+  __typename?: 'SignInResult';
+  authToken: Scalars['String'];
 };
 
 export type User = {
@@ -146,6 +162,8 @@ export type ResolversTypes = ResolversObject<{
   NewUserInput: NewUserInput;
   NewUserResult: ResolverTypeWrapper<NewUserResult>;
   Query: ResolverTypeWrapper<{}>;
+  SignInInput: SignInInput;
+  SignInResult: ResolverTypeWrapper<SignInResult>;
   String: ResolverTypeWrapper<Scalars['String']>;
   User: ResolverTypeWrapper<User>;
 }>;
@@ -159,6 +177,8 @@ export type ResolversParentTypes = ResolversObject<{
   NewUserInput: NewUserInput;
   NewUserResult: NewUserResult;
   Query: {};
+  SignInInput: SignInInput;
+  SignInResult: SignInResult;
   String: Scalars['String'];
   User: User;
 }>;
@@ -173,6 +193,7 @@ export type CommunityResolvers<ContextType = ApolloContext, ParentType extends R
 
 export type MutationResolvers<ContextType = ApolloContext, ParentType extends ResolversParentTypes['Mutation'] = ResolversParentTypes['Mutation']> = ResolversObject<{
   newUser?: Resolver<ResolversTypes['NewUserResult'], ParentType, ContextType, RequireFields<MutationNewUserArgs, 'input'>>;
+  signIn?: Resolver<ResolversTypes['SignInResult'], ParentType, ContextType, RequireFields<MutationSignInArgs, 'input'>>;
 }>;
 
 export type NewUserResultResolvers<ContextType = ApolloContext, ParentType extends ResolversParentTypes['NewUserResult'] = ResolversParentTypes['NewUserResult']> = ResolversObject<{
@@ -183,6 +204,11 @@ export type NewUserResultResolvers<ContextType = ApolloContext, ParentType exten
 export type QueryResolvers<ContextType = ApolloContext, ParentType extends ResolversParentTypes['Query'] = ResolversParentTypes['Query']> = ResolversObject<{
   communities?: Resolver<Array<Maybe<ResolversTypes['Community']>>, ParentType, ContextType>;
   users?: Resolver<Array<Maybe<ResolversTypes['User']>>, ParentType, ContextType>;
+}>;
+
+export type SignInResultResolvers<ContextType = ApolloContext, ParentType extends ResolversParentTypes['SignInResult'] = ResolversParentTypes['SignInResult']> = ResolversObject<{
+  authToken?: Resolver<ResolversTypes['String'], ParentType, ContextType>;
+  __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
 export type UserResolvers<ContextType = ApolloContext, ParentType extends ResolversParentTypes['User'] = ResolversParentTypes['User']> = ResolversObject<{
@@ -203,6 +229,7 @@ export type Resolvers<ContextType = ApolloContext> = ResolversObject<{
   Mutation?: MutationResolvers<ContextType>;
   NewUserResult?: NewUserResultResolvers<ContextType>;
   Query?: QueryResolvers<ContextType>;
+  SignInResult?: SignInResultResolvers<ContextType>;
   User?: UserResolvers<ContextType>;
 }>;
 

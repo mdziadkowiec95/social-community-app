@@ -1,11 +1,12 @@
 import { ApolloServer } from 'apollo-server';
+import { ExpressContext } from 'apollo-server-express';
+import { readFileSync } from 'fs';
 import { connectDB } from './db/connect';
 import { User } from './models/User.model';
 import { resolvers } from './resolvers';
 import { LoggerService } from './services/logger.service';
-import { readFileSync } from 'fs';
-import { ExpressContext } from 'apollo-server-express';
 import { UserService } from './services/user.service';
+import * as validators from './validators';
 
 runServer();
 
@@ -15,7 +16,9 @@ const context = ({ req }: ExpressContext) => {
 
   return {
     user,
+    validators,
     services: {
+      LoggerService,
       UserService: new UserService(),
     },
     models: {

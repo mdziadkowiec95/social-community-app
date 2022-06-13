@@ -4,6 +4,11 @@
   "ignorePatterns": ["src/types/__generated__/**/*.ts"],
   "parserOptions": { "ecmaVersion": 2018, "sourceType": "module" },
   "rules": {
-    "no-console": "error"
+    "no-console": "error",
+    "padding-line-between-statements": [
+      "error",
+      { "blankLine": "always", "prev": ["const", "let", "var"], "next": "*" },
+      { "blankLine": "any", "prev": ["const", "let", "var"], "next": ["const", "let", "var"] }
+    ]
   }
 }

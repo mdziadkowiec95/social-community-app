@@ -1,7 +1,5 @@
 import { ApolloError, UserInputError } from 'apollo-server';
-import { LoggerService } from '../services/logger.service';
 import { Resolvers } from '../types/__generated__/resolvers.types';
-import { NewUserInputValidator } from '../validators/user.validator';
 
 const getError = (error: any) => {
   if (error && error.errors) {
@@ -13,7 +11,7 @@ const getError = (error: any) => {
 
 const resolvers: Resolvers = {
   Query: {
-    users: async (parent, args, { services, models }) => {
+    users: async (parent, args, { models }) => {
       const users = await models.User.find();
 
       return users;
@@ -26,8 +24,8 @@ const resolvers: Resolvers = {
     communities: () => [],
   },
   Mutation: {
-    newUser: async (parent, { input }, { services, models }, info) => {
-      LoggerService.info(`${info.fieldName} ${info.operation.operation} ${JSON.stringify(input)}`);
+    newUser: async (parent, { input }, { services, models, validators }, info) => {
+      services.LoggerService.info(`${info.fieldName} ${info.operation.operation} ${JSON.stringify(input)}`);
 
       try {
         const existingUser = await models.User.findOne({
@@ -38,7 +36,7 @@ const resolvers: Resolvers = {
           throw new ApolloError(`Email "${input.email}" is already taken.`);
         }
 
-        await NewUserInputValidator.validate(input);
+        await validators.NewUserInputValidator.validate(input);
 
         const { firstName, lastName, email, password, dateOfBirth, avatar, city, country } = input;
 
@@ -63,14 +61,48 @@ const resolvers: Resolvers = {
 
         await newUser.save();
 
-        newUser.toObject();
-
         return {
           ...newUser.toObject(),
           authToken,
         };
       } catch (error) {
-        LoggerService.error(error);
+        services.LoggerService.error(error);
+        throw new UserInputError(getError(error));
+      }
+    },
+    signIn: async (parent, { input }, { services, models, validators }, info) => {
+      try {
+        services.LoggerService.info(`${info.fieldName} ${info.operation.operation} ${JSON.stringify(input)}`);
+
+        await validators.SignInInputValidator.validate(input);
+
+        const { email, password } = input;
+
+        const existingUser = await models.User.findOne({
+          email,
+        });
+
+        if (!existingUser) {
+          throw new UserInputError(`User with email "${email}" does not exist.`);
+        }
+
+        const validCredentials = await services.UserService.comparePasswords(password, existingUser.password);
+
+        if (!validCredentials) {
+          throw new UserInputError(`Provided credentials are invalid.`);
+        }
+
+        const authToken = services.UserService.createJSONWebToken({
+          user: {
+            id: existingUser._id,
+          },
+        });
+
+        return {
+          authToken,
+        };
+      } catch (error) {
+        services.LoggerService.error(error);
         throw new UserInputError(getError(error));
       }
     },
