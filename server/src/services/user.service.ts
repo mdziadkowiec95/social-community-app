@@ -1,9 +1,14 @@
+import { UserInputError } from 'apollo-server';
 import { genSalt, compare, hash } from 'bcryptjs';
 import { JwtPayload, sign, verify } from 'jsonwebtoken';
+import { User as UserModel } from '../models/User.model';
+import { UserJWTPayload } from '../types/user.types';
+import type { User } from '../types/__generated__/resolvers.types';
 
 const PRIVATE_KEY = 'dummy-key';
 
 class UserService {
+  constructor(public userModel: typeof UserModel) {}
   /**
    * Enrypt user password
    */
@@ -21,7 +26,7 @@ class UserService {
   /**
    * Generate JWT for given payload
    */
-  public createJSONWebToken(payload: object): string {
+  public createJSONWebToken<T extends JwtPayload>(payload: T): string {
     return sign(payload, PRIVATE_KEY, {
       expiresIn: 12 * 3600,
     });
@@ -31,6 +36,22 @@ class UserService {
    */
   public verifyJSONWebToken(token: string): string | JwtPayload {
     return verify(token, PRIVATE_KEY);
+  }
+
+  public async getAuthenticatedUser(userAuth: UserJWTPayload | null): Promise<User> {
+    try {
+      const user = await this.userModel.findById(userAuth?.user?.id);
+
+      if (!user) {
+        throw new Error('User is not autenticated.');
+      }
+
+      return user;
+    } catch (error) {
+      const err = error as Error;
+
+      throw new Error(err.message);
+    }
   }
 }
 

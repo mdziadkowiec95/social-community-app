@@ -25,6 +25,7 @@ export type Community = {
 
 export type Mutation = {
   __typename?: 'Mutation';
+  authenticateUser?: Maybe<User>;
   newUser: NewUserResult;
   signIn: SignInResult;
 };
@@ -192,6 +193,7 @@ export type CommunityResolvers<ContextType = ApolloContext, ParentType extends R
 }>;
 
 export type MutationResolvers<ContextType = ApolloContext, ParentType extends ResolversParentTypes['Mutation'] = ResolversParentTypes['Mutation']> = ResolversObject<{
+  authenticateUser?: Resolver<Maybe<ResolversTypes['User']>, ParentType, ContextType>;
   newUser?: Resolver<ResolversTypes['NewUserResult'], ParentType, ContextType, RequireFields<MutationNewUserArgs, 'input'>>;
   signIn?: Resolver<ResolversTypes['SignInResult'], ParentType, ContextType, RequireFields<MutationSignInArgs, 'input'>>;
 }>;

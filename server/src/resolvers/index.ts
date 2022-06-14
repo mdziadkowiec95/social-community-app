@@ -1,4 +1,5 @@
 import { ApolloError, UserInputError } from 'apollo-server';
+import { UserJWTPayload } from '../types/user.types';
 import { Resolvers } from '../types/__generated__/resolvers.types';
 
 const getError = (error: any) => {
@@ -16,6 +17,7 @@ const resolvers: Resolvers = {
 
       return users;
     },
+
     communities: async () => {
       return [];
     },
@@ -53,7 +55,7 @@ const resolvers: Resolvers = {
           password: encryptedPassword,
         });
 
-        const authToken = services.UserService.createJSONWebToken({
+        const authToken = services.UserService.createJSONWebToken<UserJWTPayload>({
           user: {
             id: newUser._id,
           },
@@ -70,6 +72,7 @@ const resolvers: Resolvers = {
         throw new UserInputError(getError(error));
       }
     },
+
     signIn: async (parent, { input }, { services, models, validators }, info) => {
       try {
         services.LoggerService.info(`${info.fieldName} ${info.operation.operation} ${JSON.stringify(input)}`);
@@ -92,7 +95,7 @@ const resolvers: Resolvers = {
           throw new UserInputError(`Provided credentials are invalid.`);
         }
 
-        const authToken = services.UserService.createJSONWebToken({
+        const authToken = services.UserService.createJSONWebToken<UserJWTPayload>({
           user: {
             id: existingUser._id,
           },
@@ -101,6 +104,17 @@ const resolvers: Resolvers = {
         return {
           authToken,
         };
+      } catch (error) {
+        services.LoggerService.error(error);
+        throw new UserInputError(getError(error));
+      }
+    },
+
+    authenticateUser: async (parent, args, { services, userAuth }) => {
+      try {
+        const user = services.UserService.getAuthenticatedUser(userAuth);
+
+        return user;
       } catch (error) {
         services.LoggerService.error(error);
         throw new UserInputError(getError(error));

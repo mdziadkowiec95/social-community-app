@@ -602,3 +602,120 @@
 2022-06-13T15:37:34.595Z [INFO]: 🚀  Server ready at http://localhost:4000/
 2022-06-13T15:39:27.275Z [INFO]: DB connected successfully!
 2022-06-13T15:39:27.365Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-14T17:07:31.153Z [INFO]: DB connected successfully!
+2022-06-14T17:07:31.251Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-14T17:09:12.036Z [INFO]: signIn mutation {"email":"user1@mailinator.com","password":"123123123"}
+2022-06-14T17:13:25.900Z [INFO]: DB connected successfully!
+2022-06-14T17:13:25.982Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-14T17:13:54.871Z [INFO]: DB connected successfully!
+2022-06-14T17:13:54.959Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-14T17:13:58.683Z [INFO]: DB connected successfully!
+2022-06-14T17:13:58.764Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-14T17:14:16.385Z [INFO]: DB connected successfully!
+2022-06-14T17:14:16.469Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-14T17:14:42.544Z [INFO]: DB connected successfully!
+2022-06-14T17:14:42.628Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-14T17:14:45.001Z [INFO]: DB connected successfully!
+2022-06-14T17:14:45.085Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-14T17:14:56.376Z [INFO]: DB connected successfully!
+2022-06-14T17:14:56.457Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-14T17:16:04.009Z [INFO]: DB connected successfully!
+2022-06-14T17:16:04.094Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-14T17:16:13.513Z [INFO]: DB connected successfully!
+2022-06-14T17:16:15.788Z [INFO]: DB connected successfully!
+2022-06-14T17:16:24.853Z [INFO]: DB connected successfully!
+2022-06-14T17:16:24.935Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-14T17:17:36.812Z [INFO]: DB connected successfully!
+2022-06-14T17:17:36.897Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-14T17:17:39.630Z [INFO]: DB connected successfully!
+2022-06-14T17:18:15.883Z [INFO]: DB connected successfully!
+2022-06-14T17:18:21.540Z [INFO]: DB connected successfully!
+2022-06-14T17:18:26.459Z [INFO]: DB connected successfully!
+2022-06-14T17:18:26.545Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-14T17:27:21.720Z [INFO]: DB connected successfully!
+2022-06-14T17:27:21.798Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-14T17:27:27.493Z [INFO]: DB connected successfully!
+2022-06-14T17:27:27.574Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-14T17:27:31.030Z [INFO]: DB connected successfully!
+2022-06-14T17:27:31.117Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-14T17:28:33.154Z [INFO]: DB connected successfully!
+2022-06-14T17:28:33.232Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-14T17:28:44.118Z [INFO]: DB connected successfully!
+2022-06-14T17:28:44.205Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-14T17:28:54.289Z [INFO]: signIn mutation {"email":"user1@mailinator.com","password":"123123123"}
+2022-06-14T17:32:23.540Z [INFO]: DB connected successfully!
+2022-06-14T17:32:23.628Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-14T17:33:00.466Z [INFO]: DB connected successfully!
+2022-06-14T17:33:00.547Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-14T17:33:23.798Z [INFO]: DB connected successfully!
+2022-06-14T17:33:23.883Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-14T17:34:04.003Z [INFO]: DB connected successfully!
+2022-06-14T17:34:04.084Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-14T17:34:10.889Z [INFO]: DB connected successfully!
+2022-06-14T17:34:10.967Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-14T17:37:06.585Z [INFO]: DB connected successfully!
+2022-06-14T17:37:06.667Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-14T17:38:09.264Z [INFO]: DB connected successfully!
+2022-06-14T17:38:09.342Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-14T17:39:18.086Z [INFO]: DB connected successfully!
+2022-06-14T17:39:18.173Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-14T17:39:23.822Z [INFO]: DB connected successfully!
+2022-06-14T17:39:23.906Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-14T17:43:07.399Z [INFO]: DB connected successfully!
+2022-06-14T17:43:07.477Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-14T17:43:11.933Z [INFO]: DB connected successfully!
+2022-06-14T17:43:12.016Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-14T17:43:21.289Z [INFO]: DB connected successfully!
+2022-06-14T17:43:21.378Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-14T17:43:23.830Z [INFO]: DB connected successfully!
+2022-06-14T17:43:23.911Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-14T17:43:26.514Z [INFO]: DB connected successfully!
+2022-06-14T17:43:26.595Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-14T17:43:51.672Z [INFO]: DB connected successfully!
+2022-06-14T17:43:51.759Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-14T17:45:10.964Z [INFO]: DB connected successfully!
+2022-06-14T17:45:11.041Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-14T17:45:19.099Z [INFO]: DB connected successfully!
+2022-06-14T17:45:19.177Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-14T17:46:07.639Z [INFO]: DB connected successfully!
+2022-06-14T17:46:07.725Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-14T17:48:01.137Z [INFO]: DB connected successfully!
+2022-06-14T17:48:01.223Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-14T17:48:31.462Z [INFO]: DB connected successfully!
+2022-06-14T17:48:31.540Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-14T17:48:42.807Z [INFO]: DB connected successfully!
+2022-06-14T17:48:42.892Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-14T17:49:34.920Z [INFO]: DB connected successfully!
+2022-06-14T17:49:34.998Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-14T17:49:44.389Z [INFO]: DB connected successfully!
+2022-06-14T17:49:44.481Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-14T18:02:48.409Z [INFO]: DB connected successfully!
+2022-06-14T18:02:48.493Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-14T18:03:27.888Z [INFO]: DB connected successfully!
+2022-06-14T18:03:27.963Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-14T18:04:30.267Z [INFO]: DB connected successfully!
+2022-06-14T18:04:30.344Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-14T18:04:39.725Z [INFO]: DB connected successfully!
+2022-06-14T18:04:39.802Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-14T18:04:46.997Z [INFO]: DB connected successfully!
+2022-06-14T18:04:47.078Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-14T18:04:50.258Z [INFO]: DB connected successfully!
+2022-06-14T18:04:50.335Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-14T18:04:53.989Z [INFO]: DB connected successfully!
+2022-06-14T18:04:54.070Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-14T18:04:55.176Z [INFO]: DB connected successfully!
+2022-06-14T18:04:55.252Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-14T18:05:05.594Z [INFO]: DB connected successfully!
+2022-06-14T18:05:05.671Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-14T18:05:41.022Z [INFO]: DB connected successfully!
+2022-06-14T18:05:41.107Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-14T18:05:42.740Z [INFO]: DB connected successfully!
+2022-06-14T18:05:42.831Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-14T18:06:00.438Z [INFO]: DB connected successfully!
+2022-06-14T18:06:00.521Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-14T18:06:31.192Z [INFO]: DB connected successfully!
+2022-06-14T18:06:31.271Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-14T18:06:49.028Z [INFO]: DB connected successfully!
+2022-06-14T18:06:49.109Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-14T18:06:52.488Z [INFO]: DB connected successfully!
+2022-06-14T18:06:52.571Z [INFO]: 🚀  Server ready at http://localhost:4000/
