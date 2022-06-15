@@ -39,19 +39,13 @@ class UserService {
   }
 
   public async getAuthenticatedUser(userAuth: UserJWTPayload | null): Promise<User> {
-    try {
-      const user = await this.userModel.findById(userAuth?.user?.id);
+    const user = await this.userModel.findById(userAuth?.user?.id);
 
-      if (!user) {
-        throw new Error('User is not autenticated.');
-      }
-
-      return user;
-    } catch (error) {
-      const err = error as Error;
-
-      throw new Error(err.message);
+    if (!user) {
+      throw new Error('User is not autenticated.');
     }
+
+    return user;
   }
 }
 

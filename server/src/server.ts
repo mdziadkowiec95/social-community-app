@@ -2,12 +2,12 @@ import { ApolloServer } from 'apollo-server';
 import { ExpressContext } from 'apollo-server-express';
 import { readFileSync } from 'fs';
 import { connectDB } from './db/connect';
+import { Community as CommunityModel } from './models/Community.model';
 import { User as UserModel } from './models/User.model';
 import { resolvers } from './resolvers';
 import { LoggerService } from './services/logger.service';
 import { UserService } from './services/user.service';
 import { UserJWTPayload } from './types/user.types';
-import { User } from './types/__generated__/resolvers.types';
 import * as validators from './validators';
 
 runServer();
@@ -17,8 +17,12 @@ const context = async ({ req }: ExpressContext) => {
   const UserServiceInstance = new UserService(UserModel);
   let userAuth: UserJWTPayload | null = null;
 
-  if (authToken) {
-    userAuth = UserServiceInstance.verifyJSONWebToken(authToken) as UserJWTPayload;
+  try {
+    if (authToken) {
+      userAuth = UserServiceInstance.verifyJSONWebToken(authToken) as UserJWTPayload;
+    }
+  } catch (error) {
+    LoggerService.info(`JWT expired | Token: ${authToken}`);
   }
 
   return {
@@ -30,6 +34,7 @@ const context = async ({ req }: ExpressContext) => {
     },
     models: {
       User: UserModel,
+      Community: CommunityModel,
     },
   };
 };

@@ -24,7 +24,9 @@ type SignInResult {
 type Community {
   _id: ID!
   createdBy: User!
+  createdAt: String!
   name: String!
+  #  membersCount: Int!
   description: String
 }
 
@@ -45,6 +47,11 @@ input NewUserInput {
   passwordConfirmation: String!
 }
 
+input CreateCommunityInput {
+  name: String!
+  description: String
+}
+
 # The "Query" type is special: it lists all of the available queries that
 type Query {
   users: [User]!
@@ -55,4 +62,5 @@ type Mutation {
   newUser(input: NewUserInput!): NewUserResult!
   signIn(input: SignInInput!): SignInResult!
   authenticateUser: User
+  createCommunity(input: CreateCommunityInput!): Community
 }

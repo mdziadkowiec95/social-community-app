@@ -719,3 +719,197 @@
 2022-06-14T18:06:49.109Z [INFO]: 🚀  Server ready at http://localhost:4000/
 2022-06-14T18:06:52.488Z [INFO]: DB connected successfully!
 2022-06-14T18:06:52.571Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-15T13:22:20.136Z [INFO]: DB connected successfully!
+2022-06-15T13:22:20.231Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-15T13:25:53.588Z [INFO]: DB connected successfully!
+2022-06-15T13:25:53.672Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-15T13:26:00.419Z [INFO]: DB connected successfully!
+2022-06-15T13:26:00.497Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-15T13:26:02.247Z [INFO]: JWT expired | Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjJhNzU1Y2UwYTNmMWZhMmRhZTRiNTc3In0sImlhdCI6MTY1NTIyNzczNCwiZXhwIjoxNjU1MjcwOTM0fQ.U43sn_xGrQq-67yzJw6PUsV58FYlwif2LAgeJR3eJ8E
+2022-06-15T13:26:04.064Z [INFO]: JWT expired | Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjJhNzU1Y2UwYTNmMWZhMmRhZTRiNTc3In0sImlhdCI6MTY1NTIyNzczNCwiZXhwIjoxNjU1MjcwOTM0fQ.U43sn_xGrQq-67yzJw6PUsV58FYlwif2LAgeJR3eJ8E
+2022-06-15T13:26:05.731Z [INFO]: JWT expired | Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjJhNzU1Y2UwYTNmMWZhMmRhZTRiNTc3In0sImlhdCI6MTY1NTIyNzczNCwiZXhwIjoxNjU1MjcwOTM0fQ.U43sn_xGrQq-67yzJw6PUsV58FYlwif2LAgeJR3eJ8E
+2022-06-15T13:26:15.001Z [INFO]: JWT expired | Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjJhNzU1Y2UwYTNmMWZhMmRhZTRiNTc3In0sImlhdCI6MTY1NTIyNzczNCwiZXhwIjoxNjU1MjcwOTM0fQ.U43sn_xGrQq-67yzJw6PUsV58FYlwif2LAgeJR3eJ8E
+2022-06-15T13:26:15.655Z [INFO]: JWT expired | Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjJhNzU1Y2UwYTNmMWZhMmRhZTRiNTc3In0sImlhdCI6MTY1NTIyNzczNCwiZXhwIjoxNjU1MjcwOTM0fQ.U43sn_xGrQq-67yzJw6PUsV58FYlwif2LAgeJR3eJ8E
+2022-06-15T13:26:19.860Z [INFO]: signIn mutation {"email":"user1@mailinator.com","password":"123123123"}
+2022-06-15T13:26:53.545Z [INFO]: signIn mutation {"email":"user1@mailinator.com","password":"123123123"}
+2022-06-15T13:26:59.414Z [INFO]: signIn mutation {"email":"user1@mailinator.com","password":"123123123"}
+2022-06-15T13:27:05.527Z [INFO]: signIn mutation {"email":"user1@mailinator.com","password":"123123123"}
+2022-06-15T13:28:10.577Z [INFO]: signIn mutation {"email":"user1@mailinator.com","password":"123123123"}
+2022-06-15T13:28:11.723Z [INFO]: signIn mutation {"email":"user1@mailinator.com","password":"123123123"}
+2022-06-15T13:28:27.657Z [INFO]: signIn mutation {"email":"user1@mailinator.com","password":"123123123"}
+2022-06-15T13:28:38.836Z [INFO]: signIn mutation {"email":"user1@mailinator.com","password":"123123123"}
+2022-06-15T13:28:56.118Z [INFO]: signIn mutation {"email":"user1@mailinator.com","password":"123123123"}
+2022-06-15T13:29:06.580Z [INFO]: signIn mutation {"email":"user1@mailinator.com","password":"123123123"}
+2022-06-15T13:29:47.988Z [INFO]: signIn mutation {"email":"user1@mailinator.com","password":"123123123"}
+2022-06-15T13:29:49.106Z [INFO]: signIn mutation {"email":"user1@mailinator.com","password":"123123123"}
+2022-06-15T13:29:50.499Z [INFO]: signIn mutation {"email":"user1@mailinator.com","password":"123123123"}
+2022-06-15T13:29:58.195Z [INFO]: signIn mutation {"email":"user1@mailinator.com","password":"123123123"}
+2022-06-15T13:30:16.522Z [INFO]: signIn mutation {"email":"user1@mailinator.com","password":"123123123"}
+2022-06-15T13:30:30.233Z [INFO]: signIn mutation {"email":"user1@mailinator.com","password":"123123123"}
+2022-06-15T13:31:06.081Z [INFO]: signIn mutation {"email":"user1@mailinator.com","password":"123123123"}
+2022-06-15T13:31:18.497Z [INFO]: signIn mutation {"email":"user1@mailinator.com","password":"123123123"}
+2022-06-15T13:32:31.016Z [INFO]: signIn mutation {"email":"user1@mailinator.com","password":"123123123"}
+2022-06-15T13:33:52.845Z [INFO]: signIn mutation {"email":"user1@mailinator.com","password":"123123123"}
+2022-06-15T13:33:54.672Z [INFO]: signIn mutation {"email":"user1@mailinator.com","password":"123123123"}
+2022-06-15T13:34:01.448Z [INFO]: JWT expired | Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjJhNzU1Y2UwYTNmMWZhMmRhZTRiNTc3In0sImlhdCI6MTY1NTIyNzczNCwiZXhwIjoxNjU1MjcwOTM0fQ.U43sn_xGrQq-67yzJw6PUsV58FYlwif2LAgeJR3eJ8E
+2022-06-15T13:34:25.897Z [INFO]: signIn mutation {"email":"user1@mailinator.com","password":"123123123"}
+2022-06-15T13:35:46.070Z [INFO]: signIn mutation {"email":"user1@mailinator.com","password":"123123123"}
+2022-06-15T13:36:06.080Z [INFO]: JWT expired | Token: asf
+2022-06-15T13:36:09.074Z [INFO]: signIn mutation {"email":"user1@mailinator.com","password":"123123123"}
+2022-06-15T13:50:34.467Z [INFO]: DB connected successfully!
+2022-06-15T13:50:34.544Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-15T13:50:43.517Z [INFO]: DB connected successfully!
+2022-06-15T13:50:43.599Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-15T13:51:16.960Z [INFO]: DB connected successfully!
+2022-06-15T13:51:17.039Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-15T13:52:50.402Z [INFO]: DB connected successfully!
+2022-06-15T13:52:50.483Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-15T13:53:42.101Z [INFO]: DB connected successfully!
+2022-06-15T13:53:42.188Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-15T13:55:03.653Z [INFO]: DB connected successfully!
+2022-06-15T13:55:03.730Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-15T13:57:45.033Z [ERROR]: Community validation failed: createdBy: Path `createdBy` is required.
+2022-06-15T13:58:36.614Z [INFO]: DB connected successfully!
+2022-06-15T13:58:36.694Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-15T13:58:38.215Z [INFO]: signIn mutation {"email":"user1@mailinator.com","password":"123123123"}
+2022-06-15T13:58:40.997Z [ERROR]: Community validation failed: createdBy: Path `createdBy` is required.
+2022-06-15T13:59:25.441Z [INFO]: DB connected successfully!
+2022-06-15T13:59:25.519Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-15T13:59:26.018Z [ERROR]: Community validation failed: createdBy: Path `createdBy` is required.
+2022-06-15T14:01:30.497Z [INFO]: DB connected successfully!
+2022-06-15T14:01:30.582Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-15T14:01:33.515Z [ERROR]: Community validation failed: createdBy: Path `createdBy` is required.
+2022-06-15T14:04:45.766Z [INFO]: DB connected successfully!
+2022-06-15T14:04:45.858Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-15T14:04:50.444Z [ERROR]: Community validation failed: createdBy: Path `createdBy` is required.
+2022-06-15T14:06:54.422Z [INFO]: DB connected successfully!
+2022-06-15T14:06:54.510Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-15T14:06:59.004Z [ERROR]: Community validation failed: createdBy: Path `createdBy` is required.
+2022-06-15T14:07:04.110Z [ERROR]: Community validation failed: createdBy: Path `createdBy` is required.
+2022-06-15T14:07:33.528Z [INFO]: DB connected successfully!
+2022-06-15T14:07:33.612Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-15T14:07:34.277Z [ERROR]: Community validation failed: createdBy: Path `createdBy` is required.
+2022-06-15T14:07:40.056Z [INFO]: DB connected successfully!
+2022-06-15T14:07:40.138Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-15T14:08:57.287Z [INFO]: DB connected successfully!
+2022-06-15T14:08:57.369Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-15T14:09:10.968Z [INFO]: DB connected successfully!
+2022-06-15T14:09:11.052Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-15T14:09:26.273Z [INFO]: DB connected successfully!
+2022-06-15T14:09:26.351Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-15T14:09:40.282Z [INFO]: DB connected successfully!
+2022-06-15T14:09:40.360Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-15T14:10:30.680Z [INFO]: DB connected successfully!
+2022-06-15T14:10:30.771Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-15T14:10:34.293Z [ERROR]: Community validation failed: createdBy: Path `createdBy` is required.
+2022-06-15T14:10:42.720Z [INFO]: DB connected successfully!
+2022-06-15T14:10:42.820Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-15T14:10:43.740Z [ERROR]: Community validation failed: createdBy: Path `createdBy` is required.
+2022-06-15T14:10:44.742Z [ERROR]: Community validation failed: createdBy: Path `createdBy` is required.
+2022-06-15T14:10:51.626Z [INFO]: DB connected successfully!
+2022-06-15T14:10:51.710Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-15T14:11:34.540Z [INFO]: DB connected successfully!
+2022-06-15T14:11:34.625Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-15T14:11:37.876Z [INFO]: DB connected successfully!
+2022-06-15T14:11:37.965Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-15T14:11:42.011Z [INFO]: DB connected successfully!
+2022-06-15T14:11:42.091Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-15T14:11:45.952Z [INFO]: DB connected successfully!
+2022-06-15T14:11:46.030Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-15T14:11:50.486Z [INFO]: DB connected successfully!
+2022-06-15T14:11:50.568Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-15T14:13:34.190Z [INFO]: DB connected successfully!
+2022-06-15T14:13:34.273Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-15T14:13:37.312Z [INFO]: DB connected successfully!
+2022-06-15T14:13:37.398Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-15T14:14:40.248Z [INFO]: DB connected successfully!
+2022-06-15T14:14:40.333Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-15T14:14:48.829Z [INFO]: DB connected successfully!
+2022-06-15T14:14:48.917Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-15T14:14:52.600Z [ERROR]: Community validation failed: createdBy: Path `createdBy` is required.
+2022-06-15T14:15:07.123Z [INFO]: DB connected successfully!
+2022-06-15T14:15:07.216Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-15T14:15:10.691Z [ERROR]: Community validation failed: createdBy: Path `createdBy` is required.
+2022-06-15T14:15:59.029Z [INFO]: DB connected successfully!
+2022-06-15T14:15:59.110Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-15T14:16:02.912Z [ERROR]: Community validation failed: createdBy: Path `createdBy` is required.
+2022-06-15T14:16:29.886Z [INFO]: DB connected successfully!
+2022-06-15T14:16:29.974Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-15T14:16:31.588Z [ERROR]: Community validation failed: createdBy: Path `createdBy` is required.
+2022-06-15T14:16:39.414Z [INFO]: DB connected successfully!
+2022-06-15T14:16:39.497Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-15T14:16:59.480Z [INFO]: DB connected successfully!
+2022-06-15T14:16:59.564Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-15T14:17:01.126Z [ERROR]: Community validation failed: createdBy: Path `createdBy` is required.
+2022-06-15T14:17:06.888Z [INFO]: DB connected successfully!
+2022-06-15T14:17:06.969Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-15T14:17:21.743Z [ERROR]: Community validation failed: createdBy: Path `createdBy` is required.
+2022-06-15T14:17:36.898Z [INFO]: DB connected successfully!
+2022-06-15T14:17:36.982Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-15T14:17:38.981Z [ERROR]: Community validation failed: createdBy: Path `createdBy` is required.
+2022-06-15T14:18:17.217Z [INFO]: DB connected successfully!
+2022-06-15T14:18:17.300Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-15T14:18:17.671Z [INFO]: authenticateUser mutation {"user":{"id":"62a755ce0a3f1fa2dae4b577"},"iat":1655301518,"exp":1655344718}
+2022-06-15T14:18:18.302Z [INFO]: authenticateUser mutation {"user":{"id":"62a755ce0a3f1fa2dae4b577"},"iat":1655301518,"exp":1655344718}
+2022-06-15T14:18:18.847Z [INFO]: authenticateUser mutation {"user":{"id":"62a755ce0a3f1fa2dae4b577"},"iat":1655301518,"exp":1655344718}
+2022-06-15T14:18:29.876Z [INFO]: authenticateUser mutation null
+2022-06-15T14:18:30.450Z [INFO]: authenticateUser mutation null
+2022-06-15T14:18:30.997Z [INFO]: authenticateUser mutation null
+2022-06-15T14:18:31.366Z [INFO]: authenticateUser mutation null
+2022-06-15T14:18:31.821Z [INFO]: authenticateUser mutation null
+2022-06-15T14:18:32.171Z [INFO]: authenticateUser mutation null
+2022-06-15T14:18:32.559Z [INFO]: authenticateUser mutation null
+2022-06-15T14:19:42.516Z [ERROR]: Community validation failed: createdBy: Path `createdBy` is required.
+2022-06-15T14:20:17.000Z [INFO]: DB connected successfully!
+2022-06-15T14:20:17.086Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-15T14:20:18.574Z [ERROR]: Community validation failed: createdBy: Path `createdBy` is required.
+2022-06-15T14:20:37.568Z [INFO]: DB connected successfully!
+2022-06-15T14:20:37.650Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-15T14:20:42.940Z [ERROR]: Community validation failed: createdBy: Path `createdBy` is required.
+2022-06-15T14:21:17.823Z [INFO]: DB connected successfully!
+2022-06-15T14:21:17.912Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-15T14:21:21.017Z [ERROR]: Community validation failed: createdBy: Path `createdBy` is required.
+2022-06-15T14:21:31.900Z [INFO]: DB connected successfully!
+2022-06-15T14:21:31.989Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-15T14:21:33.938Z [ERROR]: Community validation failed: createdBy: Path `createdBy` is required.
+2022-06-15T14:22:22.967Z [INFO]: DB connected successfully!
+2022-06-15T14:22:23.055Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-15T14:22:24.509Z [ERROR]: Community validation failed: createdBy: Path `createdBy` is required.
+2022-06-15T14:22:49.619Z [INFO]: DB connected successfully!
+2022-06-15T14:22:49.713Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-15T14:22:52.982Z [ERROR]: User is not autenticated.
+2022-06-15T14:22:53.665Z [ERROR]: User is not autenticated.
+2022-06-15T14:22:54.228Z [ERROR]: User is not autenticated.
+2022-06-15T14:22:54.816Z [ERROR]: User is not autenticated.
+2022-06-15T14:22:55.345Z [ERROR]: User is not autenticated.
+2022-06-15T14:22:55.851Z [ERROR]: User is not autenticated.
+2022-06-15T14:23:13.607Z [INFO]: DB connected successfully!
+2022-06-15T14:23:13.685Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-15T14:23:42.255Z [INFO]: DB connected successfully!
+2022-06-15T14:23:42.334Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-15T14:23:45.388Z [ERROR]: User is not autenticated.
+2022-06-15T14:24:47.929Z [INFO]: DB connected successfully!
+2022-06-15T14:24:48.008Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-15T14:25:24.588Z [INFO]: DB connected successfully!
+2022-06-15T14:25:24.668Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-15T14:29:01.691Z [INFO]: DB connected successfully!
+2022-06-15T14:29:01.773Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-15T14:29:17.350Z [ERROR]: creationDate is not defined
+2022-06-15T14:29:27.947Z [INFO]: DB connected successfully!
+2022-06-15T14:29:28.028Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-15T14:31:40.541Z [INFO]: DB connected successfully!
+2022-06-15T14:31:40.625Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-15T14:31:41.654Z [INFO]: DB connected successfully!
+2022-06-15T14:31:41.734Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-15T14:32:49.089Z [INFO]: DB connected successfully!
+2022-06-15T14:32:49.171Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-15T14:32:57.844Z [INFO]: DB connected successfully!
+2022-06-15T14:32:57.923Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-15T14:33:36.229Z [INFO]: DB connected successfully!
+2022-06-15T14:33:36.314Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-15T14:35:12.780Z [INFO]: DB connected successfully!
+2022-06-15T14:35:12.858Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-15T14:37:17.086Z [INFO]: DB connected successfully!
+2022-06-15T14:37:17.170Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-15T14:37:33.136Z [INFO]: DB connected successfully!
+2022-06-15T14:37:33.233Z [INFO]: 🚀  Server ready at http://localhost:4000/

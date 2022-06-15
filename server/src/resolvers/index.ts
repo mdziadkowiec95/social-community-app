@@ -1,14 +1,7 @@
 import { ApolloError, UserInputError } from 'apollo-server';
 import { UserJWTPayload } from '../types/user.types';
 import { Resolvers } from '../types/__generated__/resolvers.types';
-
-const getError = (error: any) => {
-  if (error && error.errors) {
-    return error.errors.join(', ');
-  }
-
-  return error.message;
-};
+import { getErrorMessage } from '../utilities/error-handling';
 
 const resolvers: Resolvers = {
   Query: {
@@ -69,7 +62,7 @@ const resolvers: Resolvers = {
         };
       } catch (error) {
         services.LoggerService.error(error);
-        throw new UserInputError(getError(error));
+        throw new UserInputError(getErrorMessage(error));
       }
     },
 
@@ -106,18 +99,42 @@ const resolvers: Resolvers = {
         };
       } catch (error) {
         services.LoggerService.error(error);
-        throw new UserInputError(getError(error));
+        throw new UserInputError(getErrorMessage(error));
       }
     },
 
-    authenticateUser: async (parent, args, { services, userAuth }) => {
+    authenticateUser: async (parent, args, { services, userAuth }, info) => {
       try {
-        const user = services.UserService.getAuthenticatedUser(userAuth);
+        services.LoggerService.info(`${info.fieldName} ${info.operation.operation} ${JSON.stringify(userAuth)}`);
+
+        const user = await services.UserService.getAuthenticatedUser(userAuth);
 
         return user;
       } catch (error) {
         services.LoggerService.error(error);
-        throw new UserInputError(getError(error));
+        throw new UserInputError(getErrorMessage(error));
+      }
+    },
+
+    createCommunity: async (parent, { input }, { services, models, userAuth }) => {
+      try {
+        const user = await services.UserService.getAuthenticatedUser(userAuth);
+        // Validate INPUT
+        // Validate if community name already exist
+        const { name, description } = input;
+
+        const community = new models.Community({
+          name,
+          description,
+          createdBy: user._id,
+        });
+
+        await community.save();
+
+        return community;
+      } catch (error) {
+        services.LoggerService.error(error);
+        throw new UserInputError(getErrorMessage(error));
       }
     },
   },

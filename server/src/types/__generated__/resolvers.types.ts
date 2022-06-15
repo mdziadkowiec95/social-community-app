@@ -18,16 +18,28 @@ export type Scalars = {
 export type Community = {
   __typename?: 'Community';
   _id: Scalars['ID'];
+  createdAt: Scalars['String'];
   createdBy: User;
   description?: Maybe<Scalars['String']>;
+  name: Scalars['String'];
+};
+
+export type CreateCommunityInput = {
+  description?: InputMaybe<Scalars['String']>;
   name: Scalars['String'];
 };
 
 export type Mutation = {
   __typename?: 'Mutation';
   authenticateUser?: Maybe<User>;
+  createCommunity?: Maybe<Community>;
   newUser: NewUserResult;
   signIn: SignInResult;
+};
+
+
+export type MutationCreateCommunityArgs = {
+  input: CreateCommunityInput;
 };
 
 
@@ -158,6 +170,7 @@ export type DirectiveResolverFn<TResult = {}, TParent = {}, TContext = {}, TArgs
 export type ResolversTypes = ResolversObject<{
   Boolean: ResolverTypeWrapper<Scalars['Boolean']>;
   Community: ResolverTypeWrapper<Community>;
+  CreateCommunityInput: CreateCommunityInput;
   ID: ResolverTypeWrapper<Scalars['ID']>;
   Mutation: ResolverTypeWrapper<{}>;
   NewUserInput: NewUserInput;
@@ -173,6 +186,7 @@ export type ResolversTypes = ResolversObject<{
 export type ResolversParentTypes = ResolversObject<{
   Boolean: Scalars['Boolean'];
   Community: Community;
+  CreateCommunityInput: CreateCommunityInput;
   ID: Scalars['ID'];
   Mutation: {};
   NewUserInput: NewUserInput;
@@ -186,6 +200,7 @@ export type ResolversParentTypes = ResolversObject<{
 
 export type CommunityResolvers<ContextType = ApolloContext, ParentType extends ResolversParentTypes['Community'] = ResolversParentTypes['Community']> = ResolversObject<{
   _id?: Resolver<ResolversTypes['ID'], ParentType, ContextType>;
+  createdAt?: Resolver<ResolversTypes['String'], ParentType, ContextType>;
   createdBy?: Resolver<ResolversTypes['User'], ParentType, ContextType>;
   description?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   name?: Resolver<ResolversTypes['String'], ParentType, ContextType>;
@@ -194,6 +209,7 @@ export type CommunityResolvers<ContextType = ApolloContext, ParentType extends R
 
 export type MutationResolvers<ContextType = ApolloContext, ParentType extends ResolversParentTypes['Mutation'] = ResolversParentTypes['Mutation']> = ResolversObject<{
   authenticateUser?: Resolver<Maybe<ResolversTypes['User']>, ParentType, ContextType>;
+  createCommunity?: Resolver<Maybe<ResolversTypes['Community']>, ParentType, ContextType, RequireFields<MutationCreateCommunityArgs, 'input'>>;
   newUser?: Resolver<ResolversTypes['NewUserResult'], ParentType, ContextType, RequireFields<MutationNewUserArgs, 'input'>>;
   signIn?: Resolver<ResolversTypes['SignInResult'], ParentType, ContextType, RequireFields<MutationSignInArgs, 'input'>>;
 }>;
