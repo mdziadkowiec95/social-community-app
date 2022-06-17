@@ -23,6 +23,7 @@
     "@graphql-tools/schema": "^8.3.14",
     "@types/gravatar": "^1.8.3",
     "apollo-server": "^3.8.2",
+    "apollo-server-core": "^3.9.0",
     "bcryptjs": "^2.4.3",
     "graphql": "^16.5.0",
     "graphql-constraint-directive": "^3.1.1",
@@ -30,11 +31,13 @@
     "gravatar": "^1.8.2",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.3.6",
+    "nodemailer": "^6.7.5",
     "winston": "^3.7.2",
     "yup": "^0.32.11"
   },
   "devDependencies": {
     "@types/bcryptjs": "^2.4.2",
+    "@types/nodemailer": "^6.4.4",
     "@typescript-eslint/eslint-plugin": "^5.27.1",
     "@typescript-eslint/parser": "^5.27.1",
     "concurrently": "^7.2.1",

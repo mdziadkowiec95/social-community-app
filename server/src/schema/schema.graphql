@@ -26,7 +26,6 @@ enum CommunityRole {
 }
 
 type CommunityMember {
-  _id: ID!
   user: ID!
   role: CommunityRole!
 }
@@ -39,6 +38,14 @@ type Community {
   members: [CommunityMember]!
   membersCount: Int!
   description: String
+}
+
+type InviteCommunityMemberResult {
+  invited: Boolean
+}
+
+type JoinComminityWithInvitationResult {
+  success: Boolean!
 }
 
 input SignInInput {
@@ -58,6 +65,16 @@ input NewUserInput {
   passwordConfirmation: String!
 }
 
+input InviteCommunityMemberInput {
+  userId: ID!
+  communityId: ID!
+  role: CommunityRole
+}
+
+input JoinComminityWithInvitationInput {
+  token: String!
+}
+
 input CreateCommunityInput {
   name: String!
   description: String
@@ -74,4 +91,6 @@ type Mutation {
   signIn(input: SignInInput!): SignInResult!
   authenticateUser: User
   createCommunity(input: CreateCommunityInput!): Community
+  inviteCommunityMember(input: InviteCommunityMemberInput!): InviteCommunityMemberResult!
+  joinCommunityWithInvitation(token: String): JoinComminityWithInvitationResult!
 }

@@ -28,7 +28,6 @@ export type Community = {
 
 export type CommunityMember = {
   __typename?: 'CommunityMember';
-  _id: Scalars['ID'];
   role: CommunityRole;
   user: Scalars['ID'];
 };
@@ -43,10 +42,32 @@ export type CreateCommunityInput = {
   name: Scalars['String'];
 };
 
+export type InviteCommunityMemberInput = {
+  communityId: Scalars['ID'];
+  role?: InputMaybe<CommunityRole>;
+  userId: Scalars['ID'];
+};
+
+export type InviteCommunityMemberResult = {
+  __typename?: 'InviteCommunityMemberResult';
+  invited?: Maybe<Scalars['Boolean']>;
+};
+
+export type JoinComminityWithInvitationInput = {
+  token: Scalars['String'];
+};
+
+export type JoinComminityWithInvitationResult = {
+  __typename?: 'JoinComminityWithInvitationResult';
+  success: Scalars['Boolean'];
+};
+
 export type Mutation = {
   __typename?: 'Mutation';
   authenticateUser?: Maybe<User>;
   createCommunity?: Maybe<Community>;
+  inviteCommunityMember: InviteCommunityMemberResult;
+  joinCommunityWithInvitation: JoinComminityWithInvitationResult;
   newUser: NewUserResult;
   signIn: SignInResult;
 };
@@ -54,6 +75,16 @@ export type Mutation = {
 
 export type MutationCreateCommunityArgs = {
   input: CreateCommunityInput;
+};
+
+
+export type MutationInviteCommunityMemberArgs = {
+  input: InviteCommunityMemberInput;
+};
+
+
+export type MutationJoinCommunityWithInvitationArgs = {
+  token?: InputMaybe<Scalars['String']>;
 };
 
 
@@ -188,6 +219,10 @@ export type ResolversTypes = ResolversObject<{
   CreateCommunityInput: CreateCommunityInput;
   ID: ResolverTypeWrapper<Scalars['ID']>;
   Int: ResolverTypeWrapper<Scalars['Int']>;
+  InviteCommunityMemberInput: InviteCommunityMemberInput;
+  InviteCommunityMemberResult: ResolverTypeWrapper<InviteCommunityMemberResult>;
+  JoinComminityWithInvitationInput: JoinComminityWithInvitationInput;
+  JoinComminityWithInvitationResult: ResolverTypeWrapper<JoinComminityWithInvitationResult>;
   Mutation: ResolverTypeWrapper<{}>;
   NewUserInput: NewUserInput;
   NewUserResult: ResolverTypeWrapper<NewUserResult>;
@@ -206,6 +241,10 @@ export type ResolversParentTypes = ResolversObject<{
   CreateCommunityInput: CreateCommunityInput;
   ID: Scalars['ID'];
   Int: Scalars['Int'];
+  InviteCommunityMemberInput: InviteCommunityMemberInput;
+  InviteCommunityMemberResult: InviteCommunityMemberResult;
+  JoinComminityWithInvitationInput: JoinComminityWithInvitationInput;
+  JoinComminityWithInvitationResult: JoinComminityWithInvitationResult;
   Mutation: {};
   NewUserInput: NewUserInput;
   NewUserResult: NewUserResult;
@@ -228,15 +267,26 @@ export type CommunityResolvers<ContextType = ApolloContext, ParentType extends R
 }>;
 
 export type CommunityMemberResolvers<ContextType = ApolloContext, ParentType extends ResolversParentTypes['CommunityMember'] = ResolversParentTypes['CommunityMember']> = ResolversObject<{
-  _id?: Resolver<ResolversTypes['ID'], ParentType, ContextType>;
   role?: Resolver<ResolversTypes['CommunityRole'], ParentType, ContextType>;
   user?: Resolver<ResolversTypes['ID'], ParentType, ContextType>;
+  __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
+}>;
+
+export type InviteCommunityMemberResultResolvers<ContextType = ApolloContext, ParentType extends ResolversParentTypes['InviteCommunityMemberResult'] = ResolversParentTypes['InviteCommunityMemberResult']> = ResolversObject<{
+  invited?: Resolver<Maybe<ResolversTypes['Boolean']>, ParentType, ContextType>;
+  __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
+}>;
+
+export type JoinComminityWithInvitationResultResolvers<ContextType = ApolloContext, ParentType extends ResolversParentTypes['JoinComminityWithInvitationResult'] = ResolversParentTypes['JoinComminityWithInvitationResult']> = ResolversObject<{
+  success?: Resolver<ResolversTypes['Boolean'], ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
 export type MutationResolvers<ContextType = ApolloContext, ParentType extends ResolversParentTypes['Mutation'] = ResolversParentTypes['Mutation']> = ResolversObject<{
   authenticateUser?: Resolver<Maybe<ResolversTypes['User']>, ParentType, ContextType>;
   createCommunity?: Resolver<Maybe<ResolversTypes['Community']>, ParentType, ContextType, RequireFields<MutationCreateCommunityArgs, 'input'>>;
+  inviteCommunityMember?: Resolver<ResolversTypes['InviteCommunityMemberResult'], ParentType, ContextType, RequireFields<MutationInviteCommunityMemberArgs, 'input'>>;
+  joinCommunityWithInvitation?: Resolver<ResolversTypes['JoinComminityWithInvitationResult'], ParentType, ContextType, Partial<MutationJoinCommunityWithInvitationArgs>>;
   newUser?: Resolver<ResolversTypes['NewUserResult'], ParentType, ContextType, RequireFields<MutationNewUserArgs, 'input'>>;
   signIn?: Resolver<ResolversTypes['SignInResult'], ParentType, ContextType, RequireFields<MutationSignInArgs, 'input'>>;
 }>;
@@ -271,6 +321,8 @@ export type UserResolvers<ContextType = ApolloContext, ParentType extends Resolv
 export type Resolvers<ContextType = ApolloContext> = ResolversObject<{
   Community?: CommunityResolvers<ContextType>;
   CommunityMember?: CommunityMemberResolvers<ContextType>;
+  InviteCommunityMemberResult?: InviteCommunityMemberResultResolvers<ContextType>;
+  JoinComminityWithInvitationResult?: JoinComminityWithInvitationResultResolvers<ContextType>;
   Mutation?: MutationResolvers<ContextType>;
   NewUserResult?: NewUserResultResolvers<ContextType>;
   Query?: QueryResolvers<ContextType>;

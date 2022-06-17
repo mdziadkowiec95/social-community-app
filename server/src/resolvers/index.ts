@@ -1,4 +1,6 @@
 import { ApolloError, UserInputError } from 'apollo-server';
+import nodemailer from 'nodemailer';
+import crypto from 'crypto';
 import { CommunityRole } from '../models/Community.model';
 import { UserJWTPayload } from '../types/user.types';
 import { Resolvers } from '../types/__generated__/resolvers.types';
@@ -165,6 +167,97 @@ const resolvers: Resolvers = {
         await community.save();
 
         return community;
+      } catch (error) {
+        services.LoggerService.error(error);
+        throw new UserInputError(getErrorMessage(error));
+      }
+    },
+
+    inviteCommunityMember: async (parent, { input }, { services, models, userAuth }, info) => {
+      /**
+       * TODO:
+       * 1. Verify that user who invite is allowed (ADMIN user) of the community
+       * 2. Update expiration of existin token if already thee is some token
+       * 3. Send community info in the email
+       */
+      try {
+        const role = input.role || CommunityRole.USER;
+        const invitatiorToken = new models.CommunityInvitationToken({
+          userId: input.userId,
+          communityId: input.communityId,
+          token: crypto.randomBytes(16).toString('hex'),
+          role,
+        });
+
+        await invitatiorToken.save();
+
+        const transporter = nodemailer.createTransport({
+          service: 'gmail',
+          auth: {
+            user: 'hrmdrum@gmail.com',
+            pass: 'dbbscxeyncpobcot',
+          },
+        });
+
+        const mailOptions = {
+          from: 'hrmdrum@gmail.com',
+          to: 'herminator@mailinator.com',
+          subject: `[Social Community App] - New community invitation (community placeholder)`,
+          html: `
+            <h1>You have been invited to the "${input.communityId}" community</h1>
+            <a href="">Click here to join!</a>
+            <p>Token: ${invitatiorToken.token}</p>
+          `,
+        };
+
+        transporter.sendMail(mailOptions, (err, info) => {
+          if (err) {
+            services.LoggerService.error(err.message);
+          } else {
+            services.LoggerService.info(info.accepted);
+          }
+        });
+
+        return {
+          invited: true,
+        };
+      } catch (error) {
+        services.LoggerService.error(error);
+        throw new UserInputError(getErrorMessage(error));
+      }
+    },
+
+    joinCommunityWithInvitation: async (parent, { token }, { models, services }) => {
+      /**
+       * TODO:
+       * 1. Make sure we are not duplication same member in the community
+       * 2. Make sure we update the ROLE if member already exists
+       *
+       */
+
+      try {
+        const communityIvitation = await models.CommunityInvitationToken.findOne({ token });
+
+        if (!communityIvitation) {
+          throw new Error(`Community invitation is not longer valid. Please ask for invitation directly`);
+        }
+
+        const community = await models.Community.findById(communityIvitation.communityId);
+
+        if (!community) {
+          throw new Error(`Community you were invited to no longer exist.`);
+        }
+
+        community.members.push({
+          user: communityIvitation.userId,
+          role: communityIvitation.role,
+        });
+
+        await community.save();
+
+        return {
+          success: true,
+        };
       } catch (error) {
         services.LoggerService.error(error);
         throw new UserInputError(getErrorMessage(error));
