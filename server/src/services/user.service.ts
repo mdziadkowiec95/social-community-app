@@ -1,5 +1,5 @@
-import { UserInputError } from 'apollo-server';
 import { genSalt, compare, hash } from 'bcryptjs';
+import { Options } from 'gravatar';
 import { JwtPayload, sign, verify } from 'jsonwebtoken';
 import { User as UserModel } from '../models/User.model';
 import { UserJWTPayload } from '../types/user.types';
@@ -7,8 +7,12 @@ import type { User } from '../types/__generated__/resolvers.types';
 
 const PRIVATE_KEY = 'dummy-key';
 
+interface Gravatar {
+  url(email: string, options?: Options, protocol?: boolean): string;
+}
+
 class UserService {
-  constructor(public userModel: typeof UserModel) {}
+  constructor(public userModel: typeof UserModel, public avatar: Gravatar) {}
   /**
    * Enrypt user password
    */
@@ -46,6 +50,10 @@ class UserService {
     }
 
     return user;
+  }
+
+  public getAvatarURL(email: string): string {
+    return this.avatar.url(email, { protocol: 'https', s: '100' });
   }
 }
 

@@ -10,7 +10,6 @@ type User {
   city: String
   country: String!
   avatar: String
-  communities: [Community]!
 }
 
 type NewUserResult {
@@ -21,12 +20,24 @@ type SignInResult {
   authToken: String!
 }
 
+enum CommunityRole {
+  ADMIN
+  USER
+}
+
+type CommunityMember {
+  _id: ID!
+  user: ID!
+  role: CommunityRole!
+}
+
 type Community {
   _id: ID!
-  createdBy: User!
+  createdBy: ID!
   createdAt: String!
   name: String!
-  #  membersCount: Int!
+  members: [CommunityMember]!
+  membersCount: Int!
   description: String
 }
 

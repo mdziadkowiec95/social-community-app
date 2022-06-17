@@ -913,3 +913,227 @@
 2022-06-15T14:37:17.170Z [INFO]: 🚀  Server ready at http://localhost:4000/
 2022-06-15T14:37:33.136Z [INFO]: DB connected successfully!
 2022-06-15T14:37:33.233Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-15T14:55:23.459Z [INFO]: DB connected successfully!
+2022-06-15T14:55:23.557Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-15T14:59:31.684Z [INFO]: DB connected successfully!
+2022-06-15T14:59:31.771Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-15T14:59:47.045Z [ERROR]: name is a required field
+2022-06-15T15:00:28.044Z [INFO]: DB connected successfully!
+2022-06-15T15:00:28.124Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-15T15:00:28.888Z [ERROR]: name is a required field
+2022-06-15T15:00:37.117Z [ERROR]: name is a required field
+2022-06-15T15:01:46.425Z [INFO]: DB connected successfully!
+2022-06-15T15:01:46.505Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-15T15:01:48.694Z [INFO]: DB connected successfully!
+2022-06-15T15:01:48.774Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-15T15:01:58.773Z [INFO]: DB connected successfully!
+2022-06-15T15:01:58.858Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-15T15:02:01.238Z [ERROR]: name must be at least 1 characters
+2022-06-15T15:02:02.128Z [ERROR]: name must be at least 1 characters
+2022-06-15T15:02:07.049Z [ERROR]: name must be at least 1 characters
+2022-06-15T15:04:43.670Z [INFO]: DB connected successfully!
+2022-06-15T15:04:43.756Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-15T15:04:46.211Z [ERROR]: name must be at least 1 characters
+2022-06-15T15:04:47.533Z [ERROR]: name must be at least 1 characters
+2022-06-15T15:04:56.540Z [INFO]: DB connected successfully!
+2022-06-15T15:04:56.624Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-15T15:04:57.434Z [ERROR]: name is a required field
+2022-06-15T15:04:58.274Z [ERROR]: name is a required field
+2022-06-15T15:05:15.889Z [INFO]: DB connected successfully!
+2022-06-15T15:05:15.974Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-15T15:06:31.747Z [INFO]: DB connected successfully!
+2022-06-15T15:06:31.832Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-15T15:06:33.890Z [ERROR]: Community with name "qwfqwf" already exist.
+2022-06-15T15:06:35.186Z [ERROR]: Community with name "qwfqwf" already exist.
+2022-06-15T15:06:35.778Z [ERROR]: Community with name "qwfqwf" already exist.
+2022-06-15T15:06:39.252Z [ERROR]: Community with name "qwfqwfx" already exist.
+2022-06-15T15:09:06.649Z [INFO]: DB connected successfully!
+2022-06-15T15:09:06.730Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-15T15:09:31.253Z [INFO]: DB connected successfully!
+2022-06-15T15:09:31.339Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-15T15:10:40.932Z [INFO]: DB connected successfully!
+2022-06-15T15:10:41.012Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-15T15:10:48.115Z [INFO]: DB connected successfully!
+2022-06-15T15:10:48.196Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-15T15:11:57.879Z [INFO]: DB connected successfully!
+2022-06-15T15:11:57.958Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-15T15:12:37.167Z [INFO]: authenticateUser mutation null
+2022-06-15T15:12:37.181Z [ERROR]: User is not autenticated.
+2022-06-15T15:12:41.147Z [INFO]: authenticateUser mutation {"user":{"id":"62a755ce0a3f1fa2dae4b577"},"iat":1655301518,"exp":1655344718}
+2022-06-15T15:12:42.779Z [INFO]: authenticateUser mutation {"user":{"id":"62a755ce0a3f1fa2dae4b577"},"iat":1655301518,"exp":1655344718}
+2022-06-15T15:12:56.782Z [INFO]: authenticateUser mutation {"user":{"id":"62a755ce0a3f1fa2dae4b577"},"iat":1655301518,"exp":1655344718}
+2022-06-15T15:13:49.891Z [INFO]: DB connected successfully!
+2022-06-15T15:13:49.973Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-15T15:19:46.415Z [INFO]: DB connected successfully!
+2022-06-15T15:19:46.501Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-15T15:19:54.697Z [INFO]: authenticateUser mutation {"user":{"id":"62a755ce0a3f1fa2dae4b577"},"iat":1655301518,"exp":1655344718}
+2022-06-15T15:19:55.685Z [INFO]: authenticateUser mutation {"user":{"id":"62a755ce0a3f1fa2dae4b577"},"iat":1655301518,"exp":1655344718}
+2022-06-15T15:20:07.459Z [INFO]: authenticateUser mutation {"user":{"id":"62a755ce0a3f1fa2dae4b577"},"iat":1655301518,"exp":1655344718}
+2022-06-15T15:20:29.361Z [INFO]: DB connected successfully!
+2022-06-15T15:20:29.445Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-15T15:20:30.500Z [INFO]: authenticateUser mutation {"user":{"id":"62a755ce0a3f1fa2dae4b577"},"iat":1655301518,"exp":1655344718}
+2022-06-15T15:21:00.816Z [INFO]: DB connected successfully!
+2022-06-15T15:21:00.901Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-15T15:21:03.137Z [INFO]: authenticateUser mutation {"user":{"id":"62a755ce0a3f1fa2dae4b577"},"iat":1655301518,"exp":1655344718}
+2022-06-15T15:21:08.671Z [INFO]: authenticateUser mutation {"user":{"id":"62a755ce0a3f1fa2dae4b577"},"iat":1655301518,"exp":1655344718}
+2022-06-15T15:21:12.904Z [INFO]: authenticateUser mutation {"user":{"id":"62a755ce0a3f1fa2dae4b577"},"iat":1655301518,"exp":1655344718}
+2022-06-15T15:21:35.549Z [INFO]: authenticateUser mutation {"user":{"id":"62a755ce0a3f1fa2dae4b577"},"iat":1655301518,"exp":1655344718}
+2022-06-15T15:23:02.394Z [INFO]: authenticateUser mutation {"user":{"id":"62a755ce0a3f1fa2dae4b577"},"iat":1655301518,"exp":1655344718}
+2022-06-15T15:23:10.825Z [INFO]: authenticateUser mutation {"user":{"id":"62a755ce0a3f1fa2dae4b577"},"iat":1655301518,"exp":1655344718}
+2022-06-15T15:23:25.655Z [INFO]: authenticateUser mutation {"user":{"id":"62a755ce0a3f1fa2dae4b577"},"iat":1655301518,"exp":1655344718}
+2022-06-15T15:23:42.017Z [INFO]: authenticateUser mutation {"user":{"id":"62a755ce0a3f1fa2dae4b577"},"iat":1655301518,"exp":1655344718}
+2022-06-15T15:24:26.099Z [INFO]: DB connected successfully!
+2022-06-15T15:24:26.183Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-15T15:26:51.490Z [INFO]: DB connected successfully!
+2022-06-15T15:26:51.571Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-15T15:26:58.903Z [INFO]: DB connected successfully!
+2022-06-15T15:26:58.985Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-15T15:27:11.412Z [INFO]: authenticateUser mutation {"user":{"id":"62a755ce0a3f1fa2dae4b577"},"iat":1655301518,"exp":1655344718}
+2022-06-15T15:29:19.618Z [INFO]: DB connected successfully!
+2022-06-15T15:29:19.708Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-15T15:29:27.435Z [INFO]: authenticateUser mutation {"user":{"id":"62a755ce0a3f1fa2dae4b577"},"iat":1655301518,"exp":1655344718}
+2022-06-15T15:29:35.656Z [INFO]: authenticateUser mutation {"user":{"id":"62a755ce0a3f1fa2dae4b577"},"iat":1655301518,"exp":1655344718}
+2022-06-15T15:29:37.258Z [INFO]: authenticateUser mutation {"user":{"id":"62a755ce0a3f1fa2dae4b577"},"iat":1655301518,"exp":1655344718}
+2022-06-15T15:32:14.067Z [INFO]: DB connected successfully!
+2022-06-15T15:32:14.149Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-15T15:32:15.091Z [INFO]: authenticateUser mutation {"user":{"id":"62a755ce0a3f1fa2dae4b577"},"iat":1655301518,"exp":1655344718}
+2022-06-15T15:32:18.452Z [INFO]: authenticateUser mutation {"user":{"id":"62a755ce0a3f1fa2dae4b577"},"iat":1655301518,"exp":1655344718}
+2022-06-15T15:32:35.418Z [INFO]: DB connected successfully!
+2022-06-15T15:32:35.499Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-15T15:32:37.949Z [INFO]: authenticateUser mutation {"user":{"id":"62a755ce0a3f1fa2dae4b577"},"iat":1655301518,"exp":1655344718}
+2022-06-15T15:33:08.383Z [INFO]: DB connected successfully!
+2022-06-15T15:33:08.468Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-15T15:33:17.485Z [INFO]: authenticateUser mutation {"user":{"id":"62a755ce0a3f1fa2dae4b577"},"iat":1655301518,"exp":1655344718}
+2022-06-15T15:34:01.276Z [INFO]: DB connected successfully!
+2022-06-15T15:34:01.358Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-15T15:34:08.872Z [INFO]: authenticateUser mutation {"user":{"id":"62a755ce0a3f1fa2dae4b577"},"iat":1655301518,"exp":1655344718}
+2022-06-15T15:34:09.840Z [INFO]: authenticateUser mutation {"user":{"id":"62a755ce0a3f1fa2dae4b577"},"iat":1655301518,"exp":1655344718}
+2022-06-15T15:34:11.583Z [INFO]: authenticateUser mutation {"user":{"id":"62a755ce0a3f1fa2dae4b577"},"iat":1655301518,"exp":1655344718}
+2022-06-15T15:41:20.762Z [INFO]: DB connected successfully!
+2022-06-15T15:41:20.854Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-15T15:42:01.778Z [INFO]: DB connected successfully!
+2022-06-15T15:42:01.859Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-17T08:31:12.145Z [INFO]: JWT expired | Token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoiNjJhNzU1Y2UwYTNmMWZhMmRhZTRiNTc3In0sImlhdCI6MTY1NTMwMTUxOCwiZXhwIjoxNjU1MzQ0NzE4fQ.h4snQBRn1REb4ZaD-tpf3lqufPMg1AbYc6VidU_TDoo
+2022-06-17T08:31:12.158Z [INFO]: authenticateUser mutation null
+2022-06-17T08:31:12.183Z [ERROR]: User is not autenticated.
+2022-06-17T08:31:16.624Z [INFO]: signIn mutation {"email":"user1@mailinator.com","password":"123123123"}
+2022-06-17T08:31:20.322Z [INFO]: authenticateUser mutation {"user":{"id":"62a755ce0a3f1fa2dae4b577"},"iat":1655454676,"exp":1655497876}
+2022-06-17T08:32:16.925Z [INFO]: DB connected successfully!
+2022-06-17T08:32:17.018Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-17T08:32:20.463Z [INFO]: DB connected successfully!
+2022-06-17T08:32:20.542Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-17T08:39:55.983Z [INFO]: DB connected successfully!
+2022-06-17T08:39:56.067Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-17T08:40:11.346Z [INFO]: DB connected successfully!
+2022-06-17T08:40:17.756Z [INFO]: DB connected successfully!
+2022-06-17T08:40:17.839Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-17T08:41:30.892Z [INFO]: DB connected successfully!
+2022-06-17T08:41:30.978Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-17T08:42:43.495Z [INFO]: DB connected successfully!
+2022-06-17T08:42:43.574Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-17T08:42:53.706Z [INFO]: DB connected successfully!
+2022-06-17T08:42:53.788Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-17T08:43:47.019Z [INFO]: DB connected successfully!
+2022-06-17T08:43:47.104Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-17T08:43:49.391Z [ERROR]: Community with name "c2" already exist.
+2022-06-17T08:44:08.001Z [INFO]: DB connected successfully!
+2022-06-17T08:44:08.082Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-17T08:44:10.385Z [INFO]: DB connected successfully!
+2022-06-17T08:44:10.463Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-17T08:44:19.939Z [INFO]: DB connected successfully!
+2022-06-17T08:44:20.020Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-17T08:44:31.581Z [INFO]: DB connected successfully!
+2022-06-17T08:44:31.659Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-17T08:44:41.952Z [ERROR]: Community with name "c2qwf" already exist.
+2022-06-17T08:45:57.395Z [INFO]: DB connected successfully!
+2022-06-17T08:45:57.473Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-17T08:46:03.264Z [ERROR]: Community with name "c2qwf" already exist.
+2022-06-17T08:46:06.714Z [ERROR]: Community validation failed: members.0.role: `qwfqwf` is not a valid enum value for path `role`.
+2022-06-17T08:46:22.730Z [INFO]: DB connected successfully!
+2022-06-17T08:46:22.817Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-17T08:46:58.861Z [INFO]: DB connected successfully!
+2022-06-17T08:46:58.943Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-17T08:47:11.239Z [INFO]: DB connected successfully!
+2022-06-17T08:47:11.316Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-17T08:47:13.811Z [INFO]: DB connected successfully!
+2022-06-17T08:47:13.895Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-17T08:48:30.055Z [INFO]: DB connected successfully!
+2022-06-17T08:48:30.135Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-17T08:48:39.918Z [ERROR]: Community with name "c2qwfqwfqf" already exist.
+2022-06-17T08:49:17.043Z [INFO]: DB connected successfully!
+2022-06-17T08:49:17.123Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-17T08:50:19.513Z [INFO]: DB connected successfully!
+2022-06-17T08:50:19.594Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-17T08:50:21.631Z [INFO]: DB connected successfully!
+2022-06-17T08:50:21.712Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-17T08:50:34.892Z [INFO]: authenticateUser mutation {"user":{"id":"62a755ce0a3f1fa2dae4b577"},"iat":1655454676,"exp":1655497876}
+2022-06-17T08:50:36.713Z [INFO]: authenticateUser mutation {"user":{"id":"62a755ce0a3f1fa2dae4b577"},"iat":1655454676,"exp":1655497876}
+2022-06-17T08:50:37.720Z [INFO]: authenticateUser mutation {"user":{"id":"62a755ce0a3f1fa2dae4b577"},"iat":1655454676,"exp":1655497876}
+2022-06-17T08:51:19.904Z [INFO]: DB connected successfully!
+2022-06-17T08:51:19.989Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-17T08:51:23.473Z [INFO]: authenticateUser mutation {"user":{"id":"62a755ce0a3f1fa2dae4b577"},"iat":1655454676,"exp":1655497876}
+2022-06-17T08:51:24.322Z [INFO]: authenticateUser mutation {"user":{"id":"62a755ce0a3f1fa2dae4b577"},"iat":1655454676,"exp":1655497876}
+2022-06-17T08:51:25.059Z [INFO]: authenticateUser mutation {"user":{"id":"62a755ce0a3f1fa2dae4b577"},"iat":1655454676,"exp":1655497876}
+2022-06-17T08:51:32.552Z [INFO]: DB connected successfully!
+2022-06-17T08:51:32.641Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-17T08:51:34.266Z [INFO]: authenticateUser mutation {"user":{"id":"62a755ce0a3f1fa2dae4b577"},"iat":1655454676,"exp":1655497876}
+2022-06-17T08:51:35.233Z [INFO]: authenticateUser mutation {"user":{"id":"62a755ce0a3f1fa2dae4b577"},"iat":1655454676,"exp":1655497876}
+2022-06-17T08:52:01.695Z [INFO]: DB connected successfully!
+2022-06-17T08:52:01.773Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-17T08:52:39.173Z [INFO]: DB connected successfully!
+2022-06-17T08:52:39.254Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-17T08:53:55.687Z [INFO]: DB connected successfully!
+2022-06-17T08:53:55.764Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-17T08:55:32.723Z [INFO]: DB connected successfully!
+2022-06-17T08:55:32.804Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-17T08:57:58.903Z [INFO]: DB connected successfully!
+2022-06-17T08:57:58.995Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-17T08:58:07.081Z [INFO]: DB connected successfully!
+2022-06-17T08:58:07.162Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-17T08:58:14.028Z [INFO]: DB connected successfully!
+2022-06-17T08:58:14.107Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-17T09:01:23.484Z [INFO]: DB connected successfully!
+2022-06-17T09:01:23.565Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-17T09:02:07.031Z [INFO]: DB connected successfully!
+2022-06-17T09:02:07.112Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-17T09:02:19.855Z [ERROR]: User is not autenticated.
+2022-06-17T09:02:23.859Z [INFO]: signIn mutation {"email":"user1@mailinator.com","password":"123123123"}
+2022-06-17T09:02:26.669Z [ERROR]: User is not autenticated.
+2022-06-17T09:02:27.576Z [ERROR]: User is not autenticated.
+2022-06-17T09:05:03.549Z [INFO]: DB connected successfully!
+2022-06-17T09:05:03.632Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-17T09:06:52.308Z [INFO]: DB connected successfully!
+2022-06-17T09:06:52.387Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-17T09:07:28.842Z [INFO]: DB connected successfully!
+2022-06-17T09:07:28.923Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-17T09:07:53.125Z [INFO]: DB connected successfully!
+2022-06-17T09:07:53.214Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-17T09:08:35.454Z [INFO]: DB connected successfully!
+2022-06-17T09:08:51.530Z [INFO]: DB connected successfully!
+2022-06-17T09:08:51.611Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-17T09:08:59.561Z [INFO]: DB connected successfully!
+2022-06-17T09:08:59.641Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-17T09:14:30.936Z [INFO]: DB connected successfully!
+2022-06-17T09:14:31.034Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-17T09:14:37.807Z [INFO]: DB connected successfully!
+2022-06-17T09:14:37.887Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-17T09:16:18.545Z [INFO]: DB connected successfully!
+2022-06-17T09:16:18.626Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-17T09:16:27.451Z [INFO]: DB connected successfully!
+2022-06-17T09:16:27.533Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-17T09:16:29.735Z [INFO]: DB connected successfully!
+2022-06-17T09:16:29.819Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-17T09:18:07.467Z [INFO]: DB connected successfully!
+2022-06-17T09:18:07.550Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-17T09:18:13.828Z [INFO]: DB connected successfully!
+2022-06-17T09:18:13.912Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-17T09:18:15.682Z [INFO]: DB connected successfully!
+2022-06-17T09:18:15.760Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-17T09:18:50.978Z [INFO]: DB connected successfully!
+2022-06-17T09:18:51.060Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-17T09:19:46.701Z [INFO]: DB connected successfully!
+2022-06-17T09:19:46.788Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-17T09:20:38.576Z [INFO]: DB connected successfully!
+2022-06-17T09:20:38.656Z [INFO]: 🚀  Server ready at http://localhost:4000/
+2022-06-17T09:20:54.070Z [INFO]: DB connected successfully!
+2022-06-17T09:20:54.151Z [INFO]: 🚀  Server ready at http://localhost:4000/

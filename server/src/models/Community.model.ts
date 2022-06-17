@@ -1,13 +1,26 @@
 import { model, Schema } from 'mongoose';
 import { Community } from '../types/__generated__/resolvers.types';
+import { ObjectIdType } from './schema-types';
 
-const DateType = Schema.Types.Date as unknown as typeof String;
+export enum CommunityRole {
+  ADMIN = 'ADMIN',
+  USER = 'USER',
+}
 
 const communitySchema = new Schema<Community>(
   {
     name: { type: String, required: true },
     description: { type: String },
-    createdBy: { type: Schema.Types.ObjectId, ref: 'User', required: true },
+    createdBy: { type: ObjectIdType, ref: 'User', required: true },
+    members: {
+      type: [
+        {
+          user: { type: ObjectIdType, ref: 'User', required: true },
+          role: { type: String, enum: Object.keys(CommunityRole), required: true },
+        },
+      ],
+      required: true,
+    },
   },
   {
     timestamps: true,

@@ -25,15 +25,6 @@ const userSchema = new Schema<
     city: { type: String },
     country: { type: String, required: true },
     avatar: { type: String, default: null },
-    communities: {
-      type: [
-        {
-          type: Schema.Types.ObjectId,
-          ref: 'Community',
-        },
-      ],
-      default: [],
-    },
   },
   {
     timestamps: true,

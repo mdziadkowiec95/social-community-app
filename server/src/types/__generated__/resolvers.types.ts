@@ -19,10 +19,24 @@ export type Community = {
   __typename?: 'Community';
   _id: Scalars['ID'];
   createdAt: Scalars['String'];
-  createdBy: User;
+  createdBy: Scalars['ID'];
   description?: Maybe<Scalars['String']>;
+  members: Array<Maybe<CommunityMember>>;
+  membersCount: Scalars['Int'];
   name: Scalars['String'];
 };
+
+export type CommunityMember = {
+  __typename?: 'CommunityMember';
+  _id: Scalars['ID'];
+  role: CommunityRole;
+  user: Scalars['ID'];
+};
+
+export enum CommunityRole {
+  Admin = 'ADMIN',
+  User = 'USER'
+}
 
 export type CreateCommunityInput = {
   description?: InputMaybe<Scalars['String']>;
@@ -90,7 +104,6 @@ export type User = {
   _id: Scalars['ID'];
   avatar?: Maybe<Scalars['String']>;
   city?: Maybe<Scalars['String']>;
-  communities: Array<Maybe<Community>>;
   country: Scalars['String'];
   dateOfBirth: Scalars['String'];
   email: Scalars['String'];
@@ -170,8 +183,11 @@ export type DirectiveResolverFn<TResult = {}, TParent = {}, TContext = {}, TArgs
 export type ResolversTypes = ResolversObject<{
   Boolean: ResolverTypeWrapper<Scalars['Boolean']>;
   Community: ResolverTypeWrapper<Community>;
+  CommunityMember: ResolverTypeWrapper<CommunityMember>;
+  CommunityRole: CommunityRole;
   CreateCommunityInput: CreateCommunityInput;
   ID: ResolverTypeWrapper<Scalars['ID']>;
+  Int: ResolverTypeWrapper<Scalars['Int']>;
   Mutation: ResolverTypeWrapper<{}>;
   NewUserInput: NewUserInput;
   NewUserResult: ResolverTypeWrapper<NewUserResult>;
@@ -186,8 +202,10 @@ export type ResolversTypes = ResolversObject<{
 export type ResolversParentTypes = ResolversObject<{
   Boolean: Scalars['Boolean'];
   Community: Community;
+  CommunityMember: CommunityMember;
   CreateCommunityInput: CreateCommunityInput;
   ID: Scalars['ID'];
+  Int: Scalars['Int'];
   Mutation: {};
   NewUserInput: NewUserInput;
   NewUserResult: NewUserResult;
@@ -201,9 +219,18 @@ export type ResolversParentTypes = ResolversObject<{
 export type CommunityResolvers<ContextType = ApolloContext, ParentType extends ResolversParentTypes['Community'] = ResolversParentTypes['Community']> = ResolversObject<{
   _id?: Resolver<ResolversTypes['ID'], ParentType, ContextType>;
   createdAt?: Resolver<ResolversTypes['String'], ParentType, ContextType>;
-  createdBy?: Resolver<ResolversTypes['User'], ParentType, ContextType>;
+  createdBy?: Resolver<ResolversTypes['ID'], ParentType, ContextType>;
   description?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
+  members?: Resolver<Array<Maybe<ResolversTypes['CommunityMember']>>, ParentType, ContextType>;
+  membersCount?: Resolver<ResolversTypes['Int'], ParentType, ContextType>;
   name?: Resolver<ResolversTypes['String'], ParentType, ContextType>;
+  __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
+}>;
+
+export type CommunityMemberResolvers<ContextType = ApolloContext, ParentType extends ResolversParentTypes['CommunityMember'] = ResolversParentTypes['CommunityMember']> = ResolversObject<{
+  _id?: Resolver<ResolversTypes['ID'], ParentType, ContextType>;
+  role?: Resolver<ResolversTypes['CommunityRole'], ParentType, ContextType>;
+  user?: Resolver<ResolversTypes['ID'], ParentType, ContextType>;
   __isTypeOf?: IsTypeOfResolverFn<ParentType, ContextType>;
 }>;
 
@@ -233,7 +260,6 @@ export type UserResolvers<ContextType = ApolloContext, ParentType extends Resolv
   _id?: Resolver<ResolversTypes['ID'], ParentType, ContextType>;
   avatar?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
   city?: Resolver<Maybe<ResolversTypes['String']>, ParentType, ContextType>;
-  communities?: Resolver<Array<Maybe<ResolversTypes['Community']>>, ParentType, ContextType>;
   country?: Resolver<ResolversTypes['String'], ParentType, ContextType>;
   dateOfBirth?: Resolver<ResolversTypes['String'], ParentType, ContextType>;
   email?: Resolver<ResolversTypes['String'], ParentType, ContextType>;
@@ -244,6 +270,7 @@ export type UserResolvers<ContextType = ApolloContext, ParentType extends Resolv
 
 export type Resolvers<ContextType = ApolloContext> = ResolversObject<{
   Community?: CommunityResolvers<ContextType>;
+  CommunityMember?: CommunityMemberResolvers<ContextType>;
   Mutation?: MutationResolvers<ContextType>;
   NewUserResult?: NewUserResultResolvers<ContextType>;
   Query?: QueryResolvers<ContextType>;

@@ -1,7 +1,9 @@
 import { ApolloError, UserInputError } from 'apollo-server';
+import { CommunityRole } from '../models/Community.model';
 import { UserJWTPayload } from '../types/user.types';
 import { Resolvers } from '../types/__generated__/resolvers.types';
 import { getErrorMessage } from '../utilities/error-handling';
+import { CreateCommunityInputValidator } from '../validators/community.validator';
 
 const resolvers: Resolvers = {
   Query: {
@@ -11,13 +13,30 @@ const resolvers: Resolvers = {
       return users;
     },
 
-    communities: async () => {
-      return [];
+    communities: async (parent, args, { models, services, userAuth }) => {
+      try {
+        const user = await services.UserService.getAuthenticatedUser(userAuth);
+
+        return await models.Community.find({ 'members.user': user._id });
+      } catch (error) {
+        services.LoggerService.error(error);
+        throw new UserInputError(getErrorMessage(error));
+      }
     },
   },
-  User: {
-    communities: () => [],
+  User: {},
+  Community: {
+    membersCount: async (parent, args, { models }) => {
+      const communityId = parent._id;
+
+      const members = await models.Community.count({
+        _id: communityId,
+      });
+
+      return members;
+    },
   },
+
   Mutation: {
     newUser: async (parent, { input }, { services, models, validators }, info) => {
       services.LoggerService.info(`${info.fieldName} ${info.operation.operation} ${JSON.stringify(input)}`);
@@ -42,7 +61,7 @@ const resolvers: Resolvers = {
           lastName,
           email,
           dateOfBirth,
-          avatar,
+          avatar: avatar ?? services.UserService.getAvatarURL(email),
           city,
           country,
           password: encryptedPassword,
@@ -119,14 +138,28 @@ const resolvers: Resolvers = {
     createCommunity: async (parent, { input }, { services, models, userAuth }) => {
       try {
         const user = await services.UserService.getAuthenticatedUser(userAuth);
-        // Validate INPUT
+
+        await CreateCommunityInputValidator.validate(input);
         // Validate if community name already exist
+
         const { name, description } = input;
+
+        const existingCommunity = await models.Community.findOne({ name });
+
+        if (existingCommunity) {
+          throw new UserInputError(`Community with name "${name}" already exist.`);
+        }
 
         const community = new models.Community({
           name,
           description,
           createdBy: user._id,
+          members: [
+            {
+              user: user._id,
+              role: CommunityRole.ADMIN,
+            },
+          ],
         });
 
         await community.save();

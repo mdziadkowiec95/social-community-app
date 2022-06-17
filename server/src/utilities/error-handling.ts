@@ -2,6 +2,10 @@ export const getErrorMessage = (error: any) => {
   if (error && error?.errors) {
     // Handle MongoDB schema validation error case
     if (error.name === 'ValidationError') {
+      if (Array.isArray(error.errors)) {
+        return error.errors.join(', ');
+      }
+
       const validationErrors: { [k: string]: string } = {};
 
       Object.keys(error.errors).forEach((key) => {
