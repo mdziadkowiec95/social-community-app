@@ -1,11 +1,6 @@
 import { model, Schema } from 'mongoose';
-import { User } from '../types/__generated__/resolvers.types';
 
-const userSchema = new Schema<
-  User & {
-    password: string;
-  }
->(
+const userSchema = new Schema(
   {
     email: {
       type: String,
@@ -21,7 +16,7 @@ const userSchema = new Schema<
     },
     firstName: { type: String, required: true },
     lastName: { type: String, required: true },
-    dateOfBirth: { type: String, required: true },
+    dateOfBirth: { type: Date, required: true },
     city: { type: String },
     country: { type: String, required: true },
     avatar: { type: String, default: null },
@@ -31,6 +26,6 @@ const userSchema = new Schema<
   },
 );
 
-const User = model('User', userSchema);
+const UserModel = model('User', userSchema);
 
-export { User };
+export { UserModel };

@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "concurrently \"ts-node-dev --transpile-only --no-notify --exit-child ./src/server.ts\" \"npm run generate:watch\"",
+    "dev": "concurrently \"ts-node-dev --transpile-only --no-notify --exit-child ./src/server.ts\"",
     "lint": "eslint **/*.ts",
     "format": "eslint **/*.ts --fix",
     "generate": "graphql-codegen",
@@ -32,6 +32,7 @@
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.3.6",
     "nodemailer": "^6.7.5",
+    "radash": "^7.1.0",
     "winston": "^3.7.2",
     "yup": "^0.32.11"
   },

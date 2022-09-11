@@ -1,63 +1,33 @@
-import { ApolloServer } from 'apollo-server';
-import { ExpressContext } from 'apollo-server-express';
-import { readFileSync } from 'fs';
 import gravatar from 'gravatar';
 import { connectDB } from './db/connect';
-import { Community as CommunityModel } from './models/Community.model';
-import { CommunityInvitationToken as CommunityInvitationTokenModel } from './models/CommunityInvitationToken.model';
-import { User as UserModel } from './models/User.model';
-import { resolvers } from './resolvers';
+import { UserModel } from './models/User.model';
 import { LoggerService } from './services/logger.service';
-import { UserService } from './services/user.service';
-import { UserJWTPayload } from './types/user.types';
-import * as validators from './validators';
+import { userServiceFactory } from './services/user.service';
+import { validators } from './validators';
 import express from 'express';
+import { userControllerFactory } from './controllers/user.controller';
+import { createRouter } from './routes';
 
-runServer();
+startServer();
 
-const context = async ({ req }: ExpressContext) => {
-  const authToken = req.headers.authorization;
-  const UserServiceInstance = new UserService(UserModel, gravatar);
-  let userAuth: UserJWTPayload | null = null;
+async function startServer() {
+  const app = express();
 
-  try {
-    if (authToken) {
-      userAuth = UserServiceInstance.verifyJSONWebToken(authToken) as UserJWTPayload;
-    }
-  } catch (error) {
-    LoggerService.info(`JWT expired | Token: ${authToken}`);
-  }
+  const port = process.env.port || 5001;
+  const UserService = userServiceFactory({ UserModel, avatar: gravatar });
+  const userController = userControllerFactory({
+    LoggerService,
+    UserModel,
+    UserService,
+  });
+  const router = createRouter({ userController, validators });
 
-  return {
-    userAuth,
-    validators,
-    services: {
-      LoggerService,
-      UserService: UserServiceInstance,
-    },
-    models: {
-      User: UserModel,
-      Community: CommunityModel,
-      CommunityInvitationToken: CommunityInvitationTokenModel,
-    },
-  };
-};
-
-export type ApolloContext = Awaited<ReturnType<typeof context>>;
-
-async function runServer() {
   await connectDB();
 
-  const typeDefs = readFileSync('./src/schema/schema.graphql', 'utf8');
-
-  const server = new ApolloServer({
-    typeDefs,
-    resolvers,
-    // csrfPrevention: {},
-    context,
+  app.listen(port, () => {
+    LoggerService.info(`Express server started on port: ${port}`);
   });
 
-  server.listen().then((details) => {
-    LoggerService.info(`🚀  Server ready at ${details.url} ${details.server}`);
-  });
+  app.use(express.json());
+  app.use('/user', router.user);
 }
