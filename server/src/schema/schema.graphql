@@ -1,0 +1,96 @@
+# Comments in GraphQL strings (such as this one) start with the hash (#) symbol.
+
+# This "User" type defines the queryable fields for every user in our data source.
+type User {
+  _id: ID!
+  email: String!
+  firstName: String!
+  lastName: String!
+  dateOfBirth: String!
+  city: String
+  country: String!
+  avatar: String
+}
+
+type NewUserResult {
+  authToken: String!
+}
+
+type SignInResult {
+  authToken: String!
+}
+
+enum CommunityRole {
+  ADMIN
+  USER
+}
+
+type CommunityMember {
+  user: ID!
+  role: CommunityRole!
+}
+
+type Community {
+  _id: ID!
+  createdBy: ID!
+  createdAt: String!
+  name: String!
+  members: [CommunityMember]!
+  membersCount: Int!
+  description: String
+}
+
+type InviteCommunityMemberResult {
+  invited: Boolean
+}
+
+type JoinComminityWithInvitationResult {
+  success: Boolean!
+}
+
+input SignInInput {
+  email: String!
+  password: String!
+}
+
+input NewUserInput {
+  firstName: String!
+  lastName: String!
+  dateOfBirth: String!
+  city: String
+  country: String!
+  avatar: String
+  email: String!
+  password: String!
+  passwordConfirmation: String!
+}
+
+input InviteCommunityMemberInput {
+  userId: ID!
+  communityId: ID!
+  role: CommunityRole
+}
+
+input JoinComminityWithInvitationInput {
+  token: String!
+}
+
+input CreateCommunityInput {
+  name: String!
+  description: String
+}
+
+# The "Query" type is special: it lists all of the available queries that
+type Query {
+  users: [User]!
+  communities: [Community]!
+}
+
+type Mutation {
+  newUser(input: NewUserInput!): NewUserResult!
+  signIn(input: SignInInput!): SignInResult!
+  authenticateUser: User
+  createCommunity(input: CreateCommunityInput!): Community
+  inviteCommunityMember(input: InviteCommunityMemberInput!): InviteCommunityMemberResult!
+  joinCommunityWithInvitation(token: String): JoinComminityWithInvitationResult!
+}

@@ -1,0 +1,10 @@
+schema: ./src/schema/schema.graphql
+generates:
+  ./src/types/__generated__/resolvers.types.ts:
+    config:
+      useIndexSignature: true
+      contextType: ../../server#ApolloContext
+
+    plugins:
+      - typescript
+      - typescript-resolvers
