@@ -1,5 +1,5 @@
 import { genSalt, compare, hash } from 'bcryptjs';
-import { Options } from 'gravatar';
+import gravatar from 'gravatar';
 import { JwtPayload, sign, verify } from 'jsonwebtoken';
 import { UserModel } from '../models/User.model';
 import { UserJWTPayload } from '../types/user.types';
@@ -8,7 +8,7 @@ import type { User } from '../types/__generated__/resolvers.types';
 const PRIVATE_KEY = 'dummy-key';
 
 interface Gravatar {
-  url(email: string, options?: Options, protocol?: boolean): string;
+  url(email: string, options?: gravatar.Options, protocol?: boolean): string;
 }
 
 interface UserServiceFactoryArguments {
@@ -16,7 +16,7 @@ interface UserServiceFactoryArguments {
   avatar: Gravatar;
 }
 
-function userServiceFactory({ UserModel, avatar }: UserServiceFactoryArguments) {
+function userServiceFactory({ UserModel, avatar = gravatar }: UserServiceFactoryArguments) {
   return {
     /**
      * Enrypt user password
