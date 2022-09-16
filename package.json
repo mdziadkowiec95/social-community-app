@@ -6,7 +6,7 @@
   "scripts": {
     "server:dev": "cd server && npm run dev",
     "build-server": "cd server && npm run build",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "cd server && npm test",
     "format-and-verify": "cd frontend && npm run format-and-verify && cd ../server && npm run format-and-verify",
     "prepare": "husky install"
   },
