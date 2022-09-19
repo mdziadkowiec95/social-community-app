@@ -1,6 +1,17 @@
 import { model, Schema } from 'mongoose';
 
-const userSchema = new Schema(
+interface User {
+  email: string;
+  password: string;
+  firstName: string;
+  lastName: string;
+  dateOfBirth: Date;
+  city?: string;
+  country: string;
+  avatar?: string;
+}
+
+const userSchema = new Schema<User>(
   {
     email: {
       type: String,
@@ -17,7 +28,7 @@ const userSchema = new Schema(
     firstName: { type: String, required: true },
     lastName: { type: String, required: true },
     dateOfBirth: { type: Date, required: true },
-    city: { type: String },
+    city: { type: String, default: null },
     country: { type: String, required: true },
     avatar: { type: String, default: null },
   },

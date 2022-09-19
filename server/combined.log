@@ -1773,3 +1773,61 @@
 2022-09-11T17:51:00.975Z [INFO]: Express server started on port: 5001
 2022-09-16T12:58:26.116Z [INFO]: DB connected successfully!
 2022-09-16T12:58:26.120Z [INFO]: Express server started on port: 5001
+2022-09-19T08:33:25.068Z [INFO]: DB connected successfully!
+2022-09-19T08:33:25.070Z [INFO]: Express server started on port: 5001
+2022-09-19T08:39:26.939Z [INFO]: DB connection failed - MongoParseError: Invalid scheme, expected connection string to start with "mongodb://" or "mongodb+srv://"
+2022-09-19T08:39:26.944Z [INFO]: Express server started on port: 5001
+2022-09-19T08:40:08.255Z [INFO]: DB connection failed - MongoParseError: Invalid scheme, expected connection string to start with "mongodb://" or "mongodb+srv://"
+2022-09-19T08:40:08.259Z [INFO]: Express server started on port: 5001
+2022-09-19T08:40:48.825Z [INFO]: DB connected successfully!
+2022-09-19T08:40:48.829Z [INFO]: Express server started on port: 5001
+2022-09-19T10:25:09.703Z [INFO]: {
+  "email": "user1_integration_test@mailinator.pl",
+  "password": "12341234"
+}
+2022-09-19T10:25:09.704Z [INFO]: Logging in new user
+2022-09-19T10:25:57.697Z [INFO]: {
+  "email": "user1_integration_test@mailinator.pl",
+  "password": "12341234"
+}
+2022-09-19T10:25:57.698Z [INFO]: Logging in new user
+2022-09-19T10:29:12.721Z [INFO]: Creating a new user.
+2022-09-19T10:38:12.964Z [INFO]: Creating a new user.
+2022-09-19T10:53:17.699Z [INFO]: Creating a new user.
+2022-09-19T10:53:17.935Z [INFO]: {
+  "email": "login-user-integration-1@mailinator.pl",
+  "password": "12341234"
+}
+2022-09-19T10:53:17.936Z [INFO]: Logging in new user
+2022-09-19T10:55:48.973Z [INFO]: Creating a new user.
+2022-09-19T10:57:07.886Z [INFO]: Creating a new user.
+2022-09-19T10:57:11.829Z [INFO]: {
+  "email": "login-user-integration-1@mailinator.pl",
+  "password": "12341234"
+}
+2022-09-19T10:57:11.830Z [INFO]: Logging in new user
+2022-09-19T10:59:34.345Z [INFO]: Creating a new user.
+2022-09-19T11:04:18.623Z [INFO]: Creating a new user.
+2022-09-19T11:04:22.437Z [INFO]: {
+  "email": "login-user-integration-1@mailinator.pl",
+  "password": "12341234"
+}
+2022-09-19T11:04:22.438Z [INFO]: Logging in new user
+2022-09-19T11:07:22.090Z [INFO]: Creating a new user.
+2022-09-19T11:07:25.882Z [INFO]: {
+  "email": "login-user-integration-1@mailinator.pl",
+  "password": "12341234"
+}
+2022-09-19T11:07:25.883Z [INFO]: Logging in new user
+2022-09-19T11:10:56.149Z [INFO]: Creating a new user.
+2022-09-19T11:10:59.634Z [INFO]: {
+  "email": "login-user-integration-1@mailinator.pl",
+  "password": "12341234"
+}
+2022-09-19T11:10:59.635Z [INFO]: Logging in new user
+2022-09-19T14:30:35.683Z [INFO]: Creating a new user.
+2022-09-19T14:30:35.818Z [INFO]: {
+  "email": "login-user-integration-1@mailinator.pl",
+  "password": "12341234"
+}
+2022-09-19T14:30:35.819Z [INFO]: Logging in new user

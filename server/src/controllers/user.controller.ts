@@ -13,7 +13,7 @@ interface UserControllerArguments {
 }
 
 const userControllerFactory = ({ LoggerService, UserModel, UserService }: UserControllerArguments) => ({
-  async loginUser(req: LoginUserRequest, res: Response) {
+  loginUser: async (req: LoginUserRequest, res: Response) => {
     LoggerService.info(req.body);
 
     try {
@@ -43,7 +43,7 @@ const userControllerFactory = ({ LoggerService, UserModel, UserService }: UserCo
 
       const authToken = UserService.createJSONWebToken<UserJWTPayload>({
         user: {
-          id: existingUser._id,
+          id: existingUser._id.toString(),
         },
       });
 
@@ -57,11 +57,11 @@ const userControllerFactory = ({ LoggerService, UserModel, UserService }: UserCo
     }
   },
 
-  async createNewUser(req: RegisterUserRequest, res: Response) {
+  createNewUser: async (req: RegisterUserRequest, res: Response) => {
     LoggerService.info(`Creating a new user.`);
 
     try {
-      const { firstName, lastName, email, password, dateOfBirth, avatar, city, country } = req.body;
+      const { email } = req.body;
 
       const existingUser = await UserModel.findOne({
         email,
@@ -74,26 +74,13 @@ const userControllerFactory = ({ LoggerService, UserModel, UserService }: UserCo
         });
       }
 
-      const encryptedPassword = await UserService.encryptPassword(password);
-
-      const newUser = new UserModel({
-        firstName,
-        lastName,
-        email,
-        dateOfBirth,
-        avatar: avatar ?? UserService.getAvatarURL(email),
-        city,
-        country,
-        password: encryptedPassword,
-      });
+      const newUser = await UserService.createNewUser(req.body);
 
       const authToken = UserService.createJSONWebToken<UserJWTPayload>({
         user: {
-          id: newUser._id,
+          id: newUser._id.toString(),
         },
       });
-
-      await newUser.save();
 
       return res.status(201).json({
         ...newUser.toObject(),

@@ -1,6 +1,6 @@
 import gravatar from 'gravatar';
-import { UserModel } from '../../models/User.model';
-import { userServiceFactory } from '../user.service';
+import { UserModel } from '../../../models/User.model';
+import { userServiceFactory } from '../../user.service';
 
 const UserModelStub = {
   findById: (id: string) => Promise.resolve(id),
@@ -11,14 +11,6 @@ describe('user service', () => {
     const service = userServiceFactory({ UserModel: UserModelStub, avatar: gravatar });
 
     expect(service).toBeDefined();
-  });
-
-  describe('encryptPassword() method', () => {
-    it('should be defined', () => {
-      const service = userServiceFactory({ UserModel: UserModelStub, avatar: gravatar });
-
-      expect(service.encryptPassword).toBeDefined();
-    });
   });
 
   describe('comparePasswords() method', () => {
