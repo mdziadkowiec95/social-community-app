@@ -6,13 +6,9 @@ import { createApp } from '../../../app';
 
 import { UserModel } from '../../../models/User.model';
 import { userServiceFactory } from '../../../services/user.service';
-import { config } from '../../../config';
 
 describe('Login user route', () => {
   beforeAll(async () => {
-    // eslint-disable-next-line no-console
-    console.log(config.DB_URI);
-
     await connectTestDB();
   });
 
@@ -42,7 +38,7 @@ describe('Login user route', () => {
     await newUser.save();
 
     // Test login
-    const response = await request(createApp()).post('/user/login').send({
+    const response = await request(createApp()).post('/api/user/login').send({
       email: 'login-user-integration-1@mailinator.pl',
       password: '12341234',
     });

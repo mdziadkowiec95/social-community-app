@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "concurrently \"ts-node-dev --transpile-only --no-notify --exit-child ./src/server.ts\"",
+    "start": "node ./dist/server.js",
     "lint": "eslint **/*.ts",
     "format": "eslint **/*.ts --fix",
     "generate": "graphql-codegen",
@@ -12,6 +13,7 @@
     "prettier-format": "prettier **/*.ts --write",
     "format-and-verify": "npm run prettier-format && npm run lint",
     "build": "tsc",
+    "clean": "rimraf dist",
     "test": "npm run test:unit && npm run test:integration",
     "test:unit": "jest --testMatch=\"**/__tests__/unit/**/*.test.[jt]s?(x)\"",
     "test:integration": "jest --testMatch=\"**/__tests__/integration/**/*.test.[jt]s?(x)\" --collectCoverage=false"
@@ -36,6 +38,7 @@
     "mongoose": "^6.3.6",
     "nodemailer": "^6.7.5",
     "radash": "^7.1.0",
+    "rimraf": "^3.0.2",
     "winston": "^3.7.2",
     "yup": "^0.32.11"
   },

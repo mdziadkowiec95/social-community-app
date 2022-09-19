@@ -1,15 +1,8 @@
 import { model, Schema } from 'mongoose';
-import { InviteCommunityMemberInput } from '../types/__generated__/resolvers.types';
 import { ObjectIdType } from './schema-types';
 import { CommunityRole } from './Community.model';
 
-const CommunityInvitationTokenSchema = new Schema<
-  InviteCommunityMemberInput & {
-    token: string;
-    createdAt: Date;
-    role: string;
-  }
->({
+const CommunityInvitationTokenSchema = new Schema({
   userId: { type: ObjectIdType, required: true, ref: 'User' },
   communityId: { type: ObjectIdType, required: true, ref: 'Community' },
   token: { type: String, required: true },

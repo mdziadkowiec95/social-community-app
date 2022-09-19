@@ -3,6 +3,10 @@ import logo from './logo.svg'
 import './App.css'
 
 function App() {
+  fetch('/api/user/login', {
+    method: 'post',
+  })
+
   return (
     <div className='App'>
       <header className='App-header'>

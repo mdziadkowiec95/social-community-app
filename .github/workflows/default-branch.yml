@@ -7,7 +7,7 @@ on:
     branches: [main]
 
 jobs:
-  test:
+  test_and_deploy:
     runs-on: ubuntu-latest
 
     strategy:
@@ -20,14 +20,22 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
-      - name: Create mongoDB Docker container for API testing
-        uses: DigiPie/mongo-action@v1.0.1
-      - name: Test mongo connection
-        id: test_mongo_connection
-        run: 'sudo mongo localhost:27017'
-      - run: cd server && npm ci
-      - run: npm test
-        env:
-          CI: true
-          DB_URI: mongodb://localhost:27017
-          DB_NAME: ci-test-database
+      # - name: Create mongoDB Docker container for API testing
+      #   uses: DigiPie/mongo-action@v1.0.1
+      # - name: Test mongo connection
+      #   id: test_mongo_connection
+      #   run: 'sudo mongo localhost:27017'
+      # - run: cd server && npm ci
+      # - run: cd frontend && npm ci
+      # - run: npm test
+      #   env:
+      #     CI: true
+      #     INGEGRATION_TEST_DB_URI: mongodb://localhost:27017/ci-test-database
+
+      - uses: actions/checkout@v2
+      - uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
+        with:
+          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+          heroku_app_name: 'social-community-app' #Must be unique in Heroku
+          heroku_email: 'michal.dziadkowiec123@gmail.com'
+          useDocker: true

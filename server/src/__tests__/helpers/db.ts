@@ -2,9 +2,15 @@ import mongoose from 'mongoose';
 import { config } from '../../config';
 
 async function connectTestDB() {
-  const url = `${config.DB_URI}/${config.DB_NAME}`;
+  try {
+    // eslint-disable-next-line no-console
+    console.log('config.INGEGRATION_TEST_DB_URI', config.INGEGRATION_TEST_DB_URI);
 
-  await mongoose.connect(url);
+    await mongoose.connect(config.INGEGRATION_TEST_DB_URI);
+  } catch (error) {
+    // eslint-disable-next-line no-console
+    console.error(error);
+  }
 }
 
 async function removeAllCollections() {

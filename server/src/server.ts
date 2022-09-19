@@ -6,7 +6,7 @@ startServer();
 
 async function startServer() {
   const app = createApp();
-  const port = process.env.port || 5001;
+  const port = process.env.PORT || 5001;
 
   await connectDB();
 
