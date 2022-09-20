@@ -1897,3 +1897,5 @@
   "password": "12341234"
 }
 2022-09-19T19:00:49.137Z [INFO]: Logging in new user
+2022-09-20T11:50:44.231Z [INFO]: DB connected successfully!
+2022-09-20T11:50:44.233Z [INFO]: Express server started on port: 5001

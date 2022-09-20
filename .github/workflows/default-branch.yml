@@ -7,6 +7,34 @@ on:
     branches: [main]
 
 jobs:
+  e2e-run:
+    runs-on: ubuntu-20.04
+
+    strategy:
+      matrix:
+        node-version: [16.x]
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Create mongoDB Docker container for API testing
+        uses: DigiPie/mongo-action@v1.0.1
+      - name: Test mongo connection
+        id: test_mongo_connection
+        run: 'sudo mongo localhost:27017'
+      - run: npm install
+      - run: npm run build-ci
+      - run: npm run start-server-for-e2e
+        env:
+          NODE_ENV: production
+          DB_URI: mongodb://localhost:27017
+          DB_NAME: e2e-test-database
+          CI: true
+      - run: npm run test:e2e-ci
+
   test_and_deploy:
     runs-on: ubuntu-latest
 
@@ -20,17 +48,17 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
-      # - name: Create mongoDB Docker container for API testing
-      #   uses: DigiPie/mongo-action@v1.0.1
-      # - name: Test mongo connection
-      #   id: test_mongo_connection
-      #   run: 'sudo mongo localhost:27017'
-      # - run: cd server && npm ci
-      # - run: cd frontend && npm ci
-      # - run: npm test
-      #   env:
-      #     CI: true
-      #     INGEGRATION_TEST_DB_URI: mongodb://localhost:27017/ci-test-database
+      - name: Create mongoDB Docker container for API testing
+        uses: DigiPie/mongo-action@v1.0.1
+      - name: Test mongo connection
+        id: test_mongo_connection
+        run: 'sudo mongo localhost:27017'
+      - run: cd server && npm ci
+      - run: cd frontend && npm ci
+      - run: npm test
+        env:
+          CI: true
+          INGEGRATION_TEST_DB_URI: mongodb://localhost:27017/ci-test-database
 
       - uses: actions/checkout@v2
       - uses: akhileshns/heroku-deploy@v3.12.12 # This is the action

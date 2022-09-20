@@ -13,8 +13,6 @@ COPY . /app
 RUN npm install
 RUN cd server && npm ci && npm run build && cd ../frontend && npm install && npm run build
 
-# TODO -> Build frontend 
-
 # Expose port 5001 for accessing the app
 EXPOSE 5001
 

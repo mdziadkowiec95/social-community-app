@@ -1,0 +1,10 @@
+2022-09-20T13:12:57.575Z [INFO]: DB connection failed - MongoParseError: Invalid scheme, expected connection string to start with "mongodb://" or "mongodb+srv://"
+2022-09-20T13:12:57.579Z [INFO]: Express server started on port: 5001
+2022-09-20T13:13:55.618Z [INFO]: DB connection failed - MongoParseError: Invalid scheme, expected connection string to start with "mongodb://" or "mongodb+srv://"
+2022-09-20T13:13:55.622Z [INFO]: Express server started on port: 5001
+2022-09-20T13:14:18.946Z [INFO]: DB connection failed - MongoParseError: Invalid scheme, expected connection string to start with "mongodb://" or "mongodb+srv://"
+2022-09-20T13:14:18.950Z [INFO]: Express server started on port: 5001
+2022-09-20T13:18:33.122Z [INFO]: DB connection failed - MongoParseError: Invalid scheme, expected connection string to start with "mongodb://" or "mongodb+srv://"
+2022-09-20T13:18:33.126Z [INFO]: Express server started on port: 5001
+2022-09-20T13:19:03.707Z [INFO]: DB connection failed - MongoParseError: Invalid scheme, expected connection string to start with "mongodb://" or "mongodb+srv://"
+2022-09-20T13:19:03.712Z [INFO]: Express server started on port: 5001
