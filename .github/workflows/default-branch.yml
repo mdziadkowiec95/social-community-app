@@ -7,7 +7,33 @@ on:
     branches: [main]
 
 jobs:
-  e2e-run:
+  test:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [16.x]
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Create mongoDB Docker container for API testing
+        uses: DigiPie/mongo-action@v1.0.1
+      - name: Test mongo connection
+        id: test_mongo_connection
+        run: 'sudo mongo localhost:27017'
+      - run: cd server && npm ci
+      - run: cd frontend && npm ci
+      - run: npm test
+        env:
+          CI: true
+          INGEGRATION_TEST_DB_URI: mongodb://localhost:27017/ci-test-database
+
+  test-e2e:
+    needs: test
     runs-on: ubuntu-20.04
 
     strategy:
@@ -35,7 +61,8 @@ jobs:
           CI: true
       - run: npm run test:e2e-ci
 
-  test_and_deploy:
+  deploy:
+    needs: test-e2e
     runs-on: ubuntu-latest
 
     strategy:
@@ -43,27 +70,12 @@ jobs:
         node-version: [16.x]
 
     steps:
-      - uses: actions/checkout@v3
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v3
-        with:
-          node-version: ${{ matrix.node-version }}
-      - name: Create mongoDB Docker container for API testing
-        uses: DigiPie/mongo-action@v1.0.1
-      - name: Test mongo connection
-        id: test_mongo_connection
-        run: 'sudo mongo localhost:27017'
-      - run: cd server && npm ci
-      - run: cd frontend && npm ci
-      - run: npm test
-        env:
-          CI: true
-          INGEGRATION_TEST_DB_URI: mongodb://localhost:27017/ci-test-database
-
       - uses: actions/checkout@v2
+      - run: echo head_ref-${{ github.head_ref }}
       - uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
         with:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
-          heroku_app_name: 'social-community-app' #Must be unique in Heroku
+          heroku_app_name: social-community-app-${{ github.head_ref }} #Must be unique in Heroku
           heroku_email: 'michal.dziadkowiec123@gmail.com'
+          region: eu
           useDocker: true
