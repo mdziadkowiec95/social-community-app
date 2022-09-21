@@ -25,8 +25,8 @@ jobs:
       - name: Test mongo connection
         id: test_mongo_connection
         run: 'sudo mongo localhost:27017'
-      - run: cd server && npm ci
-      - run: cd frontend && npm ci
+      - run: cd server && npm i
+      - run: cd frontend && npm i
       - run: npm test
         env:
           CI: true

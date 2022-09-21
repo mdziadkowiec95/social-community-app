@@ -8,7 +8,7 @@
     "start": "NODE_ENV=production node server/dist/server.js",
     "start-server-for-e2e": "NODE_ENV=production node server/dist/server.js & wait-on http://localhost:5001",
     "dev": "cd frontend && npm run start && cd ../server && npm run dev",
-    "build-ci": "cd server && npm ci && npm run build && cd ../frontend && npm ci && npm run build",
+    "build-ci": "cd server && npm install && npm run build && cd ../frontend && npm install && npm run build",
     "test": "cd server && npm run test",
     "test:e2e-ci": "cd e2e && npm run test:ci",
     "format-and-verify": "cd frontend && npm run format-and-verify && cd ../server && npm run format-and-verify",
