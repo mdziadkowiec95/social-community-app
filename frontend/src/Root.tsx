@@ -15,7 +15,7 @@ export function Root() {
       <main>
         <Container>
           <a
-            data-testid="go-to-react-page"
+            data-testid='go-to-react-page'
             className='App-link'
             href='https://reactjs.org'
             target='_blank'
