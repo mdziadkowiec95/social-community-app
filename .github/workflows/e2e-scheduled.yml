@@ -2,7 +2,7 @@ name: E2E test daily run
 
 on:
   schedule:
-    - cron: '25 16 * * *'
+    - cron: '10 17 * * *'
 
 jobs:
   test-e2e:
@@ -31,3 +31,5 @@ jobs:
           DB_URI: mongodb://localhost:27017/e2e-test-database
           CI: true
       - run: npm run test:e2e-ci
+        env:
+          E2E_BASE_URL: https://social-community-app-dev.herokuapp.com
