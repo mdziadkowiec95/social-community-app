@@ -1902,3 +1902,13 @@
 2022-09-21T13:55:47.718Z [INFO]: DB connected successfully!
 2022-09-21T13:58:03.222Z [INFO]: DB connected successfully!
 2022-09-21T13:58:03.224Z [INFO]: Express server started on port: 5001
+2022-09-22T15:32:50.300Z [INFO]: DB connected successfully!
+2022-09-22T15:32:50.302Z [INFO]: Express server started on port: 5001
+2022-09-22T15:32:55.934Z [INFO]: DB connected successfully!
+2022-09-22T15:32:55.936Z [INFO]: Express server started on port: 5001
+2022-09-22T15:33:03.364Z [INFO]: DB connected successfully!
+2022-09-22T15:33:03.367Z [INFO]: Express server started on port: 5001
+2022-09-22T15:33:45.737Z [INFO]: DB connection failed - TypeError [ERR_INVALID_URL]: Invalid URL
+2022-09-22T15:33:45.741Z [INFO]: Express server started on port: 5001
+2022-09-22T15:33:47.572Z [INFO]: DB connected successfully!
+2022-09-22T15:33:47.574Z [INFO]: Express server started on port: 5001

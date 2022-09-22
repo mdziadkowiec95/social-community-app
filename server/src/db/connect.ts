@@ -4,7 +4,7 @@ import { LoggerService } from '../services/logger.service';
 
 async function connectDB() {
   try {
-    const url = `${config.DB_URI}/${config.DB_NAME}`;
+    const url = `${config.DB_URI}`;
 
     await connect(url);
 
