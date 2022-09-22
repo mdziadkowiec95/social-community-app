@@ -10,6 +10,7 @@
     "dev": "cd frontend && npm run start && cd ../server && npm run dev",
     "build-ci": "cd server && npm install && npm run build && cd ../frontend && npm install && npm run build",
     "test": "cd server && npm run test",
+    "test:e2e-dev": "cd e2e && npm run test:dev",
     "test:e2e-ci": "cd e2e && npm run test:ci",
     "format-and-verify": "cd frontend && npm run format-and-verify && cd ../server && npm run format-and-verify",
     "prepare": "husky install"

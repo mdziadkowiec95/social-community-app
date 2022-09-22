@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Button } from 'semantic-ui-react'
-import LoginForm from '../../features/auth/components/LoginForm';
+import { LoginForm } from '../../features/auth/components/LoginForm';
 import { RegistrationForm } from '../../features/auth/components/RegistrationForm'
 
 export const JoinUs = () => {
@@ -16,7 +16,7 @@ export const JoinUs = () => {
                 <>
                     <LoginForm />
                     or
-                    <Button primary onClick={showRegistrationForm} data-testid='createNewAccountButton'>Create new account</Button>
+                    <Button primary onClick={showRegistrationForm} data-testid='create-new-account-button'>Create new account</Button>
                 </>
             )}
             {isCreatingNewAccount && <RegistrationForm />}

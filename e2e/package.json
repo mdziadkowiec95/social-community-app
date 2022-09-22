@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test:dev": "cypress open",
-    "test:ci": "npm install && CYPRESS_BASE_URL=http://localhost:5001 cypress run"
+    "test:ci": "npm install && CYPRESS_BASE_URL=http://localhost:5001 cypress run --browser chrome"
   },
   "author": "",
   "license": "ISC",
