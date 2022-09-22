@@ -54,26 +54,6 @@ jobs:
       - run: npm run start-server-for-e2e
         env:
           NODE_ENV: production
-          DB_URI: mongodb://localhost:27017
-          DB_NAME: e2e-test-database
+          DB_URI: mongodb://localhost:27017/e2e-test-database
           CI: true
       - run: npm run test:e2e-ci
-
-  deploy:
-    needs: test-e2e
-    runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: [16.x]
-
-    steps:
-      - uses: actions/checkout@v2
-      - run: echo head_ref-${{ github.head_ref }}
-      - uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
-        with:
-          heroku_api_key: ${{secrets.HEROKU_API_KEY}}
-          heroku_app_name: social-community-app-${{ github.head_ref }} #Must be unique in Heroku
-          heroku_email: 'michal.dziadkowiec123@gmail.com'
-          region: eu
-          useDocker: true
