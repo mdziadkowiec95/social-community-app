@@ -1,0 +1,33 @@
+name: E2E test daily run
+
+on:
+  schedule:
+    - cron: '25 16 * * *'
+
+jobs:
+  test-e2e:
+    runs-on: ubuntu-20.04
+
+    strategy:
+      matrix:
+        node-version: [16.x]
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Create mongoDB Docker container for API testing
+        uses: DigiPie/mongo-action@v1.0.1
+      - name: Test mongo connection
+        id: test_mongo_connection
+        run: 'sudo mongo localhost:27017'
+      - run: npm install
+      - run: npm run build-ci
+      - run: npm run start-server-for-e2e
+        env:
+          NODE_ENV: production
+          DB_URI: mongodb://localhost:27017/e2e-test-database
+          CI: true
+      - run: npm run test:e2e-ci
