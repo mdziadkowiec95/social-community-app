@@ -1773,3 +1773,132 @@
 2022-09-11T17:51:00.975Z [INFO]: Express server started on port: 5001
 2022-09-16T12:58:26.116Z [INFO]: DB connected successfully!
 2022-09-16T12:58:26.120Z [INFO]: Express server started on port: 5001
+2022-09-19T08:33:25.068Z [INFO]: DB connected successfully!
+2022-09-19T08:33:25.070Z [INFO]: Express server started on port: 5001
+2022-09-19T08:39:26.939Z [INFO]: DB connection failed - MongoParseError: Invalid scheme, expected connection string to start with "mongodb://" or "mongodb+srv://"
+2022-09-19T08:39:26.944Z [INFO]: Express server started on port: 5001
+2022-09-19T08:40:08.255Z [INFO]: DB connection failed - MongoParseError: Invalid scheme, expected connection string to start with "mongodb://" or "mongodb+srv://"
+2022-09-19T08:40:08.259Z [INFO]: Express server started on port: 5001
+2022-09-19T08:40:48.825Z [INFO]: DB connected successfully!
+2022-09-19T08:40:48.829Z [INFO]: Express server started on port: 5001
+2022-09-19T10:25:09.703Z [INFO]: {
+  "email": "user1_integration_test@mailinator.pl",
+  "password": "12341234"
+}
+2022-09-19T10:25:09.704Z [INFO]: Logging in new user
+2022-09-19T10:25:57.697Z [INFO]: {
+  "email": "user1_integration_test@mailinator.pl",
+  "password": "12341234"
+}
+2022-09-19T10:25:57.698Z [INFO]: Logging in new user
+2022-09-19T10:29:12.721Z [INFO]: Creating a new user.
+2022-09-19T10:38:12.964Z [INFO]: Creating a new user.
+2022-09-19T10:53:17.699Z [INFO]: Creating a new user.
+2022-09-19T10:53:17.935Z [INFO]: {
+  "email": "login-user-integration-1@mailinator.pl",
+  "password": "12341234"
+}
+2022-09-19T10:53:17.936Z [INFO]: Logging in new user
+2022-09-19T10:55:48.973Z [INFO]: Creating a new user.
+2022-09-19T10:57:07.886Z [INFO]: Creating a new user.
+2022-09-19T10:57:11.829Z [INFO]: {
+  "email": "login-user-integration-1@mailinator.pl",
+  "password": "12341234"
+}
+2022-09-19T10:57:11.830Z [INFO]: Logging in new user
+2022-09-19T10:59:34.345Z [INFO]: Creating a new user.
+2022-09-19T11:04:18.623Z [INFO]: Creating a new user.
+2022-09-19T11:04:22.437Z [INFO]: {
+  "email": "login-user-integration-1@mailinator.pl",
+  "password": "12341234"
+}
+2022-09-19T11:04:22.438Z [INFO]: Logging in new user
+2022-09-19T11:07:22.090Z [INFO]: Creating a new user.
+2022-09-19T11:07:25.882Z [INFO]: {
+  "email": "login-user-integration-1@mailinator.pl",
+  "password": "12341234"
+}
+2022-09-19T11:07:25.883Z [INFO]: Logging in new user
+2022-09-19T11:10:56.149Z [INFO]: Creating a new user.
+2022-09-19T11:10:59.634Z [INFO]: {
+  "email": "login-user-integration-1@mailinator.pl",
+  "password": "12341234"
+}
+2022-09-19T11:10:59.635Z [INFO]: Logging in new user
+2022-09-19T14:30:35.683Z [INFO]: Creating a new user.
+2022-09-19T14:30:35.818Z [INFO]: {
+  "email": "login-user-integration-1@mailinator.pl",
+  "password": "12341234"
+}
+2022-09-19T14:30:35.819Z [INFO]: Logging in new user
+2022-09-19T17:35:34.495Z [INFO]: DB connected successfully!
+2022-09-19T17:35:34.497Z [INFO]: Express server started on port: 5001
+2022-09-19T17:43:51.395Z [INFO]: DB connected successfully!
+2022-09-19T17:43:51.398Z [INFO]: Express server started on port: 5001
+2022-09-19T17:44:09.207Z [INFO]: DB connected successfully!
+2022-09-19T17:44:09.209Z [INFO]: Express server started on port: 5001
+2022-09-19T17:44:46.842Z [INFO]: DB connected successfully!
+2022-09-19T17:44:46.844Z [INFO]: Express server started on port: 5001
+2022-09-19T17:44:52.086Z [INFO]: DB connected successfully!
+2022-09-19T17:44:52.088Z [INFO]: Express server started on port: 5001
+2022-09-19T17:46:29.255Z [INFO]: DB connected successfully!
+2022-09-19T17:46:29.257Z [INFO]: Express server started on port: 5001
+2022-09-19T17:46:35.408Z [INFO]: DB connected successfully!
+2022-09-19T17:46:35.410Z [INFO]: Express server started on port: 5001
+2022-09-19T17:46:47.917Z [INFO]: DB connected successfully!
+2022-09-19T17:46:47.920Z [INFO]: Express server started on port: 5001
+2022-09-19T17:47:11.429Z [INFO]: DB connected successfully!
+2022-09-19T17:47:11.431Z [INFO]: Express server started on port: 5001
+2022-09-19T17:47:35.966Z [INFO]: DB connected successfully!
+2022-09-19T17:47:35.968Z [INFO]: Express server started on port: 5001
+2022-09-19T17:48:21.413Z [INFO]: DB connected successfully!
+2022-09-19T17:48:21.415Z [INFO]: Express server started on port: 5001
+2022-09-19T17:48:38.775Z [INFO]: DB connected successfully!
+2022-09-19T17:48:38.777Z [INFO]: Express server started on port: 5001
+2022-09-19T17:49:02.197Z [INFO]: DB connected successfully!
+2022-09-19T17:49:02.199Z [INFO]: Express server started on port: 5001
+2022-09-19T17:49:40.274Z [INFO]: DB connected successfully!
+2022-09-19T17:49:40.276Z [INFO]: Express server started on port: 5001
+2022-09-19T17:50:09.016Z [INFO]: DB connected successfully!
+2022-09-19T17:50:09.018Z [INFO]: Express server started on port: 5001
+2022-09-19T17:50:25.753Z [INFO]: DB connected successfully!
+2022-09-19T17:50:25.755Z [INFO]: Express server started on port: 5001
+2022-09-19T17:50:56.524Z [INFO]: DB connected successfully!
+2022-09-19T17:50:56.527Z [INFO]: Express server started on port: 5001
+2022-09-19T17:51:59.538Z [INFO]: DB connected successfully!
+2022-09-19T17:51:59.540Z [INFO]: Express server started on port: 5001
+2022-09-19T17:52:56.407Z [INFO]: DB connected successfully!
+2022-09-19T17:52:56.409Z [INFO]: Express server started on port: 5001
+2022-09-19T17:54:35.785Z [INFO]: DB connected successfully!
+2022-09-19T17:54:35.787Z [INFO]: Express server started on port: 5001
+2022-09-19T17:54:57.607Z [INFO]: DB connected successfully!
+2022-09-19T17:54:57.609Z [INFO]: Express server started on port: 5001
+2022-09-19T18:12:37.127Z [INFO]: DB connected successfully!
+2022-09-19T18:12:37.131Z [INFO]: Express server started on port: 5001
+2022-09-19T18:12:54.573Z [INFO]: DB connected successfully!
+2022-09-19T18:12:54.575Z [INFO]: Express server started on port: 5001
+2022-09-19T18:15:32.025Z [INFO]: DB connected successfully!
+2022-09-19T18:15:32.027Z [INFO]: Express server started on port: 5001
+2022-09-19T18:15:35.917Z [INFO]: DB connected successfully!
+2022-09-19T18:15:35.920Z [INFO]: Express server started on port: 5001
+2022-09-19T18:15:41.594Z [INFO]: DB connected successfully!
+2022-09-19T18:15:41.596Z [INFO]: Express server started on port: 5001
+2022-09-19T18:15:44.424Z [INFO]: DB connected successfully!
+2022-09-19T18:15:44.427Z [INFO]: Express server started on port: 5001
+2022-09-19T18:16:17.033Z [INFO]: DB connected successfully!
+2022-09-19T18:16:17.035Z [INFO]: Express server started on port: 5001
+2022-09-19T18:16:34.915Z [INFO]: DB connected successfully!
+2022-09-19T18:16:34.919Z [INFO]: Express server started on port: 5001
+2022-09-19T18:17:24.246Z [INFO]: DB connected successfully!
+2022-09-19T18:17:24.250Z [INFO]: Express server started on port: 5001
+2022-09-19T19:00:47.881Z [INFO]: Creating a new user.
+2022-09-19T19:00:49.136Z [INFO]: {
+  "email": "login-user-integration-1@mailinator.pl",
+  "password": "12341234"
+}
+2022-09-19T19:00:49.137Z [INFO]: Logging in new user
+2022-09-20T11:50:44.231Z [INFO]: DB connected successfully!
+2022-09-20T11:50:44.233Z [INFO]: Express server started on port: 5001
+2022-09-21T13:55:47.718Z [INFO]: DB connected successfully!
+2022-09-21T13:58:03.222Z [INFO]: DB connected successfully!
+2022-09-21T13:58:03.224Z [INFO]: Express server started on port: 5001

@@ -2,8 +2,8 @@ import { genSalt, compare, hash } from 'bcryptjs';
 import gravatar from 'gravatar';
 import { JwtPayload, sign, verify } from 'jsonwebtoken';
 import { UserModel } from '../models/User.model';
+import { RegisterUserBody } from '../routes/user.types';
 import { UserJWTPayload } from '../types/user.types';
-import type { User } from '../types/__generated__/resolvers.types';
 
 const PRIVATE_KEY = 'dummy-key';
 
@@ -17,15 +17,20 @@ interface UserServiceFactoryArguments {
 }
 
 function userServiceFactory({ UserModel, avatar = gravatar }: UserServiceFactoryArguments) {
-  return {
-    /**
-     * Enrypt user password
-     */
-    async encryptPassword(password: string): Promise<string> {
-      const salt = await genSalt(10);
+  function getAvatarURL(email: string): string {
+    return avatar.url(email, { protocol: 'https', s: '100' });
+  }
 
-      return await hash(password, salt);
-    },
+  /**
+   * Enrypt user password
+   */
+  async function _encryptPassword(password: string): Promise<string> {
+    const salt = await genSalt(10);
+
+    return await hash(password, salt);
+  }
+
+  return {
     /**
      * Compare user passowrd with enrypted passowrd from DB
      */
@@ -47,7 +52,7 @@ function userServiceFactory({ UserModel, avatar = gravatar }: UserServiceFactory
       return verify(token, PRIVATE_KEY);
     },
 
-    async getAuthenticatedUser(userAuth: UserJWTPayload | null): Promise<User> {
+    async getAuthenticatedUser(userAuth: UserJWTPayload | null) {
       const user = await UserModel.findById(userAuth?.user?.id);
 
       if (!user) {
@@ -57,8 +62,24 @@ function userServiceFactory({ UserModel, avatar = gravatar }: UserServiceFactory
       return user;
     },
 
-    getAvatarURL(email: string): string {
-      return avatar.url(email, { protocol: 'https', s: '100' });
+    async createNewUser(user: RegisterUserBody) {
+      const { firstName, lastName, email, password, dateOfBirth, city, country, avatar } = user;
+      const encryptedPassword = await _encryptPassword(password);
+
+      const newUser = new UserModel({
+        firstName,
+        lastName,
+        email,
+        dateOfBirth,
+        avatar: avatar ?? getAvatarURL(email),
+        city,
+        country,
+        password: encryptedPassword,
+      });
+
+      await newUser.save();
+
+      return newUser;
     },
   };
 }

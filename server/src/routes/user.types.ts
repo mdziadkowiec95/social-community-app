@@ -9,14 +9,14 @@ type LoginUserResponse = {
   authToken: string;
 };
 
-type RegisterUserBody = {
+export type RegisterUserBody = {
   firstName: string;
   lastName: string;
   email: string;
   password: string;
   passwordConfirmation: string;
   dateOfBirth: Date;
-  avatar: string;
+  avatar?: string;
   country: string;
   city?: string;
 };

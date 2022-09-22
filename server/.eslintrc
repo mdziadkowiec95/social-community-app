@@ -1,6 +1,6 @@
 {
   "parser": "@typescript-eslint/parser",
-  "extends": ["plugin:@typescript-eslint/recommended"],
+  "extends": ["plugin:@typescript-eslint/recommended", "plugin:import/recommended"],
   "ignorePatterns": ["src/types/__generated__/**/*.ts"],
   "parserOptions": { "ecmaVersion": 2018, "sourceType": "module" },
   "rules": {
@@ -10,6 +10,7 @@
       "error",
       { "blankLine": "always", "prev": ["const", "let", "var"], "next": "*" },
       { "blankLine": "any", "prev": ["const", "let", "var"], "next": ["const", "let", "var"] }
-    ]
+    ],
+    "import/no-unresolved": 0
   }
 }

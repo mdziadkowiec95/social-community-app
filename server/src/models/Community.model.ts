@@ -1,5 +1,4 @@
 import { model, Schema } from 'mongoose';
-import { Community } from '../types/__generated__/resolvers.types';
 import { ObjectIdType } from './schema-types';
 
 export enum CommunityRole {
@@ -7,7 +6,7 @@ export enum CommunityRole {
   USER = 'USER',
 }
 
-const communitySchema = new Schema<Community>(
+const communitySchema = new Schema(
   {
     name: { type: String, required: true },
     description: { type: String },

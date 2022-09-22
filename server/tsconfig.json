@@ -4,9 +4,11 @@
     "module": "commonjs",
     "lib": ["esnext"],
     "strict": true,
-    "rootDir": ".",
+    "rootDir": "./src",
     "outDir": "dist",
     "sourceMap": true,
     "esModuleInterop": true
-  }
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "**/*.test.ts"]
 }
