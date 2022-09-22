@@ -57,3 +57,5 @@ jobs:
           DB_URI: mongodb://localhost:27017/e2e-test-database
           CI: true
       - run: npm run test:e2e-ci
+        env:
+          E2E_BASE_URL: http://localhost:5001

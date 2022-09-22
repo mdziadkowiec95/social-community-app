@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test:dev": "cypress open",
-    "test:ci": "npm install && CYPRESS_BASE_URL=http://localhost:5001 cypress run --browser chrome"
+    "test:ci": "npm install && cypress run --browser chrome"
   },
   "author": "",
   "license": "ISC",
@@ -16,6 +16,7 @@
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^5.38.0",
     "@typescript-eslint/parser": "^5.38.0",
+    "dotenv": "^16.0.2",
     "eslint": "^8.23.1"
   }
 }
