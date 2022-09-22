@@ -6,8 +6,8 @@
   "scripts": {
     "dev": "concurrently \"ts-node-dev --transpile-only --no-notify --exit-child ./src/server.ts\"",
     "start": "node ./dist/server.js",
-    "lint": "eslint **/*.ts",
-    "format": "eslint **/*.ts --fix",
+    "lint": "eslint ./**/*.ts",
+    "format": "eslint ./**/*.ts --fix",
     "generate": "graphql-codegen",
     "generate:watch": "graphql-codegen --watch",
     "prettier-format": "prettier **/*.ts --write",
