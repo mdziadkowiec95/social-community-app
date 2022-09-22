@@ -5,24 +5,20 @@ export const RegistrationForm = () => {
     return (
         <Form>
             <Form.Field>
-                <label>First Name</label>
-                <input type='text' placeholder='First Name' />
+                <input type='text' placeholder='First Name' aria-label='First Name' />
             </Form.Field>
             <Form.Field>
-                <label>Last Name</label>
-                <input type='text' placeholder='Last Name' />
+                <input type='text' placeholder='Last Name' aria-label='Last Name' />
             </Form.Field>
             <Form.Field>
-                <label>Email</label>
-                <input type='email' placeholder='Email' />
+                <input type='email' placeholder='Email' aria-label='Email' />
             </Form.Field>
             <Form.Field>
-                <label>Password</label>
-                <input type='password' placeholder='Password' />
+                <input type='password' placeholder='Password' aria-label='Password' />
             </Form.Field>
             <Form.Field>
                 <label>Password confirmation</label>
-                <input type='password' placeholder='Password confirmation' />
+                <input type='password' placeholder='Password confirmation' aria-label='Password confirmation' />
             </Form.Field>
             <Form.Field>
                 <Checkbox label='I agree to the Terms and Conditions' />

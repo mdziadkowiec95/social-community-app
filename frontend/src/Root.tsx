@@ -1,15 +1,17 @@
 import React from 'react'
+import { Link, Outlet } from 'react-router-dom'
 import { Container } from 'semantic-ui-react'
 import './App.css'
-import { RegistrationPage } from './pages/RegistrationPage'
 
-function App() {
+export function Root() {
   fetch('/api/user/login', {
     method: 'post',
   })
 
   return (
     <div>
+      <Link to='join'>Join us</Link>
+      <Link to='app'>App</Link>
       <main>
         <Container>
           <a
@@ -21,11 +23,9 @@ function App() {
           >
             Learn React
           </a>
-          <RegistrationPage />
+          <Outlet />
         </Container>
       </main>
     </div>
   )
 }
-
-export default App
