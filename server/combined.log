@@ -1912,3 +1912,5 @@
 2022-09-22T15:33:45.741Z [INFO]: Express server started on port: 5001
 2022-09-22T15:33:47.572Z [INFO]: DB connected successfully!
 2022-09-22T15:33:47.574Z [INFO]: Express server started on port: 5001
+2022-10-04T08:20:35.141Z [INFO]: DB connection failed - MongoParseError: Invalid scheme, expected connection string to start with "mongodb://" or "mongodb+srv://"
+2022-10-04T08:20:35.143Z [INFO]: Express server started on port: 5001
