@@ -1,5 +1,5 @@
-import React from 'react'
-import { Link, Outlet } from 'react-router-dom'
+import React from 'react';
+import { Link, Outlet } from 'react-router-dom';
 
 export const AppRoot = () => {
   return (
@@ -11,5 +11,5 @@ export const AppRoot = () => {
         <Outlet />
       </div>
     </div>
-  )
-}
+  );
+};

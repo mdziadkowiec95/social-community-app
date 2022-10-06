@@ -1,5 +1,5 @@
-import React from 'react'
-import { Button, Form } from 'semantic-ui-react'
+import React from 'react';
+import { Button, Form } from 'semantic-ui-react';
 
 export const LoginForm = () => {
   return (
@@ -24,5 +24,5 @@ export const LoginForm = () => {
       </Form.Field>
       <Button data-testid='login-form-submit-button'>Log in</Button>
     </Form>
-  )
-}
+  );
+};
