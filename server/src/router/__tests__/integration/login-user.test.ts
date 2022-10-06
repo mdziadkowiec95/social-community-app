@@ -1,11 +1,9 @@
 import mongoose from 'mongoose';
 import request from 'supertest';
-import gravatar from 'gravatar';
 import { connectTestDB, dropAllCollections, removeAllCollections } from '../../../__tests__/helpers/db';
 import { createApp } from '../../../app';
 
-import { UserModel } from '../../../models/User.model';
-import { userServiceFactory } from '../../../services/user.service';
+import { userService } from '../../../services/user.service';
 
 describe('Login user route', () => {
   beforeAll(async () => {
@@ -23,7 +21,6 @@ describe('Login user route', () => {
 
   it('login new user - happy path', async () => {
     // Prepare new user in DB
-    const userService = userServiceFactory({ UserModel, avatar: gravatar });
     const newUser = await userService.createNewUser({
       email: 'login-user-integration-1@mailinator.pl',
       firstName: 'User 1',

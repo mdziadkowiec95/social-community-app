@@ -2,88 +2,75 @@ import { genSalt, compare, hash } from 'bcryptjs';
 import gravatar from 'gravatar';
 import { JwtPayload, sign, verify } from 'jsonwebtoken';
 import { UserModel } from '../models/User.model';
-import { RegisterUserBody } from '../routes/user.types';
+import { RegisterUserBody } from '../router/user.types';
 import { UserJWTPayload } from '../types/user.types';
 
 const PRIVATE_KEY = 'dummy-key';
 
-interface Gravatar {
-  url(email: string, options?: gravatar.Options, protocol?: boolean): string;
+function getAvatarURL(email: string): string {
+  return gravatar.url(email, { protocol: 'https', s: '100' });
 }
 
-interface UserServiceFactoryArguments {
-  UserModel: typeof UserModel;
-  avatar: Gravatar;
+/**
+ * Enrypt user password
+ */
+async function _encryptPassword(password: string): Promise<string> {
+  const salt = await genSalt(10);
+
+  return await hash(password, salt);
 }
 
-function userServiceFactory({ UserModel, avatar = gravatar }: UserServiceFactoryArguments) {
-  function getAvatarURL(email: string): string {
-    return avatar.url(email, { protocol: 'https', s: '100' });
-  }
-
+const userService = {
   /**
-   * Enrypt user password
+   * Compare user passowrd with enrypted passowrd from DB
    */
-  async function _encryptPassword(password: string): Promise<string> {
-    const salt = await genSalt(10);
+  async comparePasswords(password: string, hashedPassword: string): Promise<boolean> {
+    return compare(password, hashedPassword);
+  },
+  /**
+   * Generate JWT for given payload
+   */
+  createJSONWebToken<T extends JwtPayload>(payload: T): string {
+    return sign(payload, PRIVATE_KEY, {
+      expiresIn: 12 * 3600,
+    });
+  },
+  /**
+   * Verify if provided JWT is vaild
+   */
+  verifyToken(token: string) {
+    return verify(token, PRIVATE_KEY) as UserJWTPayload;
+  },
 
-    return await hash(password, salt);
-  }
+  async getUserById(id: string) {
+    const user = await UserModel.findById(id).select('-password');
 
-  return {
-    /**
-     * Compare user passowrd with enrypted passowrd from DB
-     */
-    async comparePasswords(password: string, hashedPassword: string): Promise<boolean> {
-      return compare(password, hashedPassword);
-    },
-    /**
-     * Generate JWT for given payload
-     */
-    createJSONWebToken<T extends JwtPayload>(payload: T): string {
-      return sign(payload, PRIVATE_KEY, {
-        expiresIn: 12 * 3600,
-      });
-    },
-    /**
-     * Verify if provided JWT is vaild
-     */
-    verifyJSONWebToken(token: string): string | JwtPayload {
-      return verify(token, PRIVATE_KEY);
-    },
+    if (!user) {
+      throw new Error('User does not exist.');
+    }
 
-    async getAuthenticatedUser(userAuth: UserJWTPayload | null) {
-      const user = await UserModel.findById(userAuth?.user?.id);
+    return user;
+  },
 
-      if (!user) {
-        throw new Error('User is not autenticated.');
-      }
+  async createNewUser(user: RegisterUserBody) {
+    const { firstName, lastName, email, password, dateOfBirth, city, country, avatar } = user;
+    const encryptedPassword = await _encryptPassword(password);
 
-      return user;
-    },
+    const newUser = new UserModel({
+      firstName,
+      lastName,
+      email,
+      dateOfBirth,
+      avatar: avatar ?? getAvatarURL(email),
+      city,
+      country,
+      password: encryptedPassword,
+    });
 
-    async createNewUser(user: RegisterUserBody) {
-      const { firstName, lastName, email, password, dateOfBirth, city, country, avatar } = user;
-      const encryptedPassword = await _encryptPassword(password);
+    await newUser.save();
 
-      const newUser = new UserModel({
-        firstName,
-        lastName,
-        email,
-        dateOfBirth,
-        avatar: avatar ?? getAvatarURL(email),
-        city,
-        country,
-        password: encryptedPassword,
-      });
+    return newUser;
+  },
+};
 
-      await newUser.save();
-
-      return newUser;
-    },
-  };
-}
-
-export type UserService = ReturnType<typeof userServiceFactory>;
-
-export { userServiceFactory };
+export { userService };

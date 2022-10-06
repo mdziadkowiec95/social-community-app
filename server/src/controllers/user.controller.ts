@@ -1,18 +1,12 @@
 import type { Response } from 'express';
 import { LoggerService } from '../services/logger.service';
-import { UserService } from '../services/user.service';
+import { userService } from '../services/user.service';
 import { UserModel } from '../models/User.model';
 import { UserJWTPayload } from '../types/user.types';
 import { getErrorResponse } from '../utilities/error-handling';
-import type { LoginUserRequest, RegisterUserRequest } from '../routes/user.types';
+import type { AuthenticateUserRequest, LoginUserRequest, RegisterUserRequest } from '../router/user.types';
 
-interface UserControllerArguments {
-  LoggerService: typeof LoggerService;
-  UserModel: typeof UserModel;
-  UserService: UserService;
-}
-
-const userControllerFactory = ({ LoggerService, UserModel, UserService }: UserControllerArguments) => ({
+const userController = {
   loginUser: async (req: LoginUserRequest, res: Response) => {
     LoggerService.info(req.body);
 
@@ -32,7 +26,7 @@ const userControllerFactory = ({ LoggerService, UserModel, UserService }: UserCo
         });
       }
 
-      const validCredentials = await UserService.comparePasswords(password, existingUser.password);
+      const validCredentials = await userService.comparePasswords(password, existingUser.password);
 
       if (!validCredentials) {
         return res.status(400).json({
@@ -41,7 +35,7 @@ const userControllerFactory = ({ LoggerService, UserModel, UserService }: UserCo
         });
       }
 
-      const authToken = UserService.createJSONWebToken<UserJWTPayload>({
+      const authToken = userService.createJSONWebToken<UserJWTPayload>({
         user: {
           id: existingUser._id.toString(),
         },
@@ -74,9 +68,9 @@ const userControllerFactory = ({ LoggerService, UserModel, UserService }: UserCo
         });
       }
 
-      const newUser = await UserService.createNewUser(req.body);
+      const newUser = await userService.createNewUser(req.body);
 
-      const authToken = UserService.createJSONWebToken<UserJWTPayload>({
+      const authToken = userService.createJSONWebToken<UserJWTPayload>({
         user: {
           id: newUser._id.toString(),
         },
@@ -92,8 +86,24 @@ const userControllerFactory = ({ LoggerService, UserModel, UserService }: UserCo
       return res.status(500).json(getErrorResponse(error, 500));
     }
   },
-});
 
-export type UserController = ReturnType<typeof userControllerFactory>;
+  authenticateUser: async (req: AuthenticateUserRequest, res: Response) => {
+    try {
+      LoggerService.info(`[authenticateUser]`);
 
-export { userControllerFactory };
+      const user = await userService.getUserById(req.user.id);
+
+      return res.status(200).json(user);
+    } catch (error) {
+      LoggerService.error(error);
+    }
+  },
+};
+
+export type UserController = typeof userController;
+
+type UserControllerKeys = keyof UserController;
+
+export type UserControllerMethod = typeof userController[UserControllerKeys];
+
+export { userController };
