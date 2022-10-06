@@ -1,9 +1,9 @@
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import { AppRoot } from '../pages/app/AppRoot'
-import Dashboard from '../pages/app/Dashboard'
-import { NonAuthRoot } from '../pages/non-auth/NonAuthRoot'
-import { JoinUs } from '../pages/non-auth/JoinUs'
-import { TermsOfUse } from '../pages/non-auth/TermsOfUse'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { AppRoot } from '../pages/app/AppRoot';
+import Dashboard from '../pages/app/Dashboard';
+import { NonAuthRoot } from '../pages/non-auth/NonAuthRoot';
+import { JoinUs } from '../pages/non-auth/JoinUs';
+import { TermsOfUse } from '../pages/non-auth/TermsOfUse';
 
 const router = createBrowserRouter([
   {
@@ -31,6 +31,6 @@ const router = createBrowserRouter([
       },
     ],
   },
-])
+]);
 
-export const AppRouterProvider = () => <RouterProvider router={router} />
+export const AppRouterProvider = () => <RouterProvider router={router} />;

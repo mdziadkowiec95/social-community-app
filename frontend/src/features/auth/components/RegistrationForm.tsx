@@ -1,5 +1,5 @@
-import React from 'react'
-import { Button, Checkbox, Form } from 'semantic-ui-react'
+import React from 'react';
+import { Button, Checkbox, Form } from 'semantic-ui-react';
 
 export const RegistrationForm = () => {
   return (
@@ -31,5 +31,5 @@ export const RegistrationForm = () => {
         Sign in
       </Button>
     </Form>
-  )
-}
+  );
+};

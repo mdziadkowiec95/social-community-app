@@ -1,5 +1,5 @@
-import React from 'react'
-import { Button } from 'semantic-ui-react'
+import React from 'react';
+import { Button } from 'semantic-ui-react';
 
 const Dashboard = () => {
   return (
@@ -7,7 +7,7 @@ const Dashboard = () => {
       <p>Dashboard</p>
       <Button>Button</Button>
     </div>
-  )
-}
+  );
+};
 
-export default Dashboard
+export default Dashboard;

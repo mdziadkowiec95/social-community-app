@@ -1,30 +1,30 @@
-import React, { useState } from 'react'
-import { Button } from 'semantic-ui-react'
-import { LoginForm } from '../../features/auth/components/LoginForm'
-import { RegistrationForm } from '../../features/auth/components/RegistrationForm'
+import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
+import { Button } from 'semantic-ui-react';
+import { LoginForm } from '../../features/auth/components/LoginForm';
+import { RegistrationForm } from '../../features/auth/components/RegistrationForm';
+// import { NS } from '../../i18n/namespaces'
 
 export const JoinUs = () => {
-  const [isCreatingNewAccount, setIsCreatingNewAccount] = useState(false)
-
-  const showRegistrationForm = () => setIsCreatingNewAccount(true)
+  const [isCreatingNewAccount, setIsCreatingNewAccount] = useState(false);
+  const { t } = useTranslation();
+  const showRegistrationForm = () => setIsCreatingNewAccount(true);
 
   return (
     <div>
-      <p>
-        Social community App helps you get connected and organized with the group of people you
-        like!
-      </p>
+      <p></p>
+      <p>{t('home:socialCommunityAppIntro')}</p>
 
       {!isCreatingNewAccount && (
         <>
           <LoginForm />
-          or
+          {t('common:or')}
           <Button primary onClick={showRegistrationForm} data-testid='create-new-account-button'>
-            Create new account
+            {t('common:createNewAccount')}
           </Button>
         </>
       )}
       {isCreatingNewAccount && <RegistrationForm />}
     </div>
-  )
-}
+  );
+};

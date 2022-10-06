@@ -1,12 +1,12 @@
-import React from 'react'
-import { Link, Outlet } from 'react-router-dom'
-import { Container } from 'semantic-ui-react'
-import './App.css'
+import React from 'react';
+import { Link, Outlet } from 'react-router-dom';
+import { Container } from 'semantic-ui-react';
+import './App.css';
 
 export function Root() {
   fetch('/api/user/login', {
     method: 'post',
-  })
+  });
 
   return (
     <div>
@@ -27,5 +27,5 @@ export function Root() {
         </Container>
       </main>
     </div>
-  )
+  );
 }
