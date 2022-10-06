@@ -8,6 +8,7 @@ module.exports = defineConfig({
     setupNodeEvents(on, config) {
       // implement node event listeners here
       config.baseUrl = process.env.E2E_BASE_URL || 'http://localhost:3000';
+      config.projectId = 'on6te2';
 
       return config;
     },

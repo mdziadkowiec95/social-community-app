@@ -31,6 +31,7 @@ export const LanguagePicker = () => {
 
   return (
     <Dropdown
+      data-testid='language-picker-dropdown'
       button
       className='icon'
       floating

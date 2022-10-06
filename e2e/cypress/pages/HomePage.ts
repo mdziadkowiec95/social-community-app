@@ -1,4 +1,4 @@
-import { byTestId } from '../helpers/query';
+import { byRole, byTestId } from '../helpers/query';
 
 // Namespace with UI locator functions
 const locators = {
@@ -10,6 +10,11 @@ const locators = {
   },
   registrationForm: {
     submitBtn: () => cy.get(byTestId('sign-in-form-submit-button')),
+  },
+  languagePicker: {
+    dropdown: () => cy.get(byTestId('language-picker-dropdown')),
+    code: () => cy.get(`${byTestId('language-picker-dropdown')} .divider`),
+    option: () => cy.get(`${byTestId('language-picker-dropdown')} ${byRole('option')}`),
   },
 };
 
@@ -27,5 +32,13 @@ export const HomePage = {
     HomePage.locators.registrationForm.submitBtn().should('not.exist');
     HomePage.locators.createNewAccountButton().click();
     HomePage.locators.registrationForm.submitBtn().should('be.visible');
+  },
+  switchLanguage: () => {
+    HomePage.locators.languagePicker.dropdown().click();
+    HomePage.locators.languagePicker.option().contains('Polish').click();
+    HomePage.locators.languagePicker.code().contains('PL');
+    HomePage.locators.languagePicker.dropdown().click();
+    HomePage.locators.languagePicker.option().contains('Angielski').click();
+    HomePage.locators.languagePicker.code().contains('EN');
   },
 };
