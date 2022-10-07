@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Dropdown, DropdownProps } from 'semantic-ui-react';
 import { DEFAULT_LANGUAGE, AVAILABLE_LANGUAGES } from '../../../../config';
-import { i18n, useTranslation } from '../../../../i18n';
+import { i18n } from '../../../../i18n';
 import { isLanguageSupported } from '../../../../utils/i18n';
 
 export const LanguagePicker = () => {
