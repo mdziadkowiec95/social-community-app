@@ -27,8 +27,8 @@ export const RegistrationForm = () => {
       <Form.Field>
         <Checkbox label='I agree to the Terms and Conditions' />
       </Form.Field>
-      <Button type='submit' data-testid='sign-in-form-submit-button'>
-        Sign in
+      <Button primary type='submit' data-testid='sign-in-form-submit-button'>
+        Sign up
       </Button>
     </Form>
   );

@@ -22,7 +22,9 @@ export const LoginForm = () => {
           data-testid='login-form-password-field'
         />
       </Form.Field>
-      <Button data-testid='login-form-submit-button'>Log in</Button>
+      <Button primary data-testid='login-form-submit-button'>
+        Log in
+      </Button>
     </Form>
   );
 };
