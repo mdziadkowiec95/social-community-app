@@ -1,4 +1,6 @@
 {
+  "appName": "SpaceFace",
   "createNewAccount": "Utwórz nowe konto",
-  "or": "lub"
+  "or": "lub",
+  "signUp": "Zarejestruj się"
 }

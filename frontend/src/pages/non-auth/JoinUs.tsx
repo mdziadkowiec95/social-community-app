@@ -19,7 +19,7 @@ export const JoinUs = () => {
         <>
           <LoginForm />
           {t('common:or')}
-          <Button primary onClick={showRegistrationForm} data-testid='create-new-account-button'>
+          <Button onClick={showRegistrationForm} data-testid='create-new-account-button'>
             {t('common:createNewAccount')}
           </Button>
         </>

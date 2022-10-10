@@ -1,12 +1,11 @@
 import React from 'react';
-import { Link, Outlet } from 'react-router-dom';
+import { Outlet } from 'react-router-dom';
+import { NavMenu } from '../../features/navigation/components/NavMenu/NavMenu';
 
 export const AppRoot = () => {
   return (
     <div>
-      <nav>
-        <Link to='dashboard'>Dashboard</Link>
-      </nav>
+      <NavMenu isAuth />
       <div>
         <Outlet />
       </div>
