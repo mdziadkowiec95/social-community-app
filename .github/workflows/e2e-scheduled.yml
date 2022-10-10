@@ -30,6 +30,6 @@ jobs:
           NODE_ENV: production
           DB_URI: mongodb://localhost:27017/e2e-test-database
           CI: true
-      - run: cd server && npm run test:ci
+      - run: cd e2e && npm run test:ci
         env:
           E2E_BASE_URL: https://social-community-app-dev.herokuapp.com
