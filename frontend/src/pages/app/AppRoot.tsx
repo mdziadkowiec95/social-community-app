@@ -1,6 +1,6 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
-import { NavMenu } from '../../features/navigation/components/NavMenu/NavMenu';
+import { NavMenu } from 'features/navigation/components/NavMenu/NavMenu';
 
 export const AppRoot = () => {
   return (
