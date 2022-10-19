@@ -4,13 +4,18 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 import { AppRouterProvider } from './router';
 import './i18n';
+import { StoreProvider } from './store';
 // @TODO -> toe be fixed. Compilation error
 // https://github.com/Semantic-Org/Semantic-UI/issues/7073
 // import 'semantic-ui-css/semantic.min.css'
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 
-root.render(<AppRouterProvider />);
+root.render(
+  <StoreProvider>
+    <AppRouterProvider />
+  </StoreProvider>,
+);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
