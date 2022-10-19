@@ -1,0 +1,2 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Wed Oct 19 19:55:51 GMT 2022","Wed Oct 19 19:55:53 GMT 2022","1302","","Login page","","Login page","switches from Login form to Create New Account form","switches from Login form to Create New Account form",""
