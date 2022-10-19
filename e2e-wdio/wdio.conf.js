@@ -55,14 +55,6 @@ exports.config = {
       maxInstances: 5,
       //
       browserName: 'chrome',
-      'wdio:devtoolsOptions': {
-        headless: true,
-      },
-      acceptInsecureCerts: true,
-      // We need to extends some Chrome flags in order to tell Chrome to run headless
-      'goog:chromeOptions': {
-        args: ['--headless', '--disable-gpu', '--disable-dev-shm-usage'],
-      },
       acceptInsecureCerts: true,
       // If outputDir is provided WebdriverIO can capture driver session logs
       // it is possible to configure which logTypes to include/exclude.
@@ -244,6 +236,12 @@ exports.config = {
    */
   afterTest: async function (test, context, { error, result, duration, passed, retries }) {
     if (!passed) {
+      await browser.takeScreenshot();
+    }
+  },
+
+  afterStep: async function (step, scenario, { error, duration, passed }, context) {
+    if (error) {
       await browser.takeScreenshot();
     }
   },
