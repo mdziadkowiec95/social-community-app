@@ -4,3 +4,4 @@ node_modules
 .DS_STORE
 server/dist
 server/combined.log
+e2e-wdio/allure-results
