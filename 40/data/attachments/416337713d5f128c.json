@@ -1,0 +1,4 @@
+{
+  "using": "css selector",
+  "value": "[data-testid=\"sign-in-form-submit-button\"]"
+}
