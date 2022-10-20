@@ -19,8 +19,8 @@ const LoginPage = {
     return browser.url(`/`);
   },
 
-  switchToCreateNewAccount() {
-    return $(selectors.createNewAccountButton).click();
+  async switchToCreateNewAccount() {
+    return await $(selectors.createNewAccountButton).click();
   },
 
   async checkIfLoginFormIsDisplayed() {
@@ -35,7 +35,7 @@ const LoginPage = {
     if (expectDisplayed) {
       await registrationFormSubmitButton.waitForDisplayed();
     } else {
-      await expect(registrationFormSubmitButton).not.toBeDisplayed();
+      expect(registrationFormSubmitButton).not.toBeDisplayed();
     }
   },
 };
