@@ -5,9 +5,6 @@ import reportWebVitals from './reportWebVitals';
 import { AppRouterProvider } from './router';
 import './i18n';
 import { StoreProvider } from './store';
-// @TODO -> toe be fixed. Compilation error
-// https://github.com/Semantic-Org/Semantic-UI/issues/7073
-// import 'semantic-ui-css/semantic.min.css'
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 

@@ -1,6 +1,7 @@
 // import axios from 'axios';
 import React from 'react';
 import { useForm } from 'react-hook-form';
+// import { useNavigate } from 'react-router';
 // import { useSelector } from 'react-redux';
 // import { useNavigate } from 'react-router';
 import { Button, Form } from 'semantic-ui-react';
@@ -18,35 +19,20 @@ export const LoginForm = () => {
     // formState: { errors },
   } = useForm<InputFormFields>();
   // const navigate = useNavigate();
-  // const state = useSelector(state => state.)
+  const [loginUser, { isLoading, data }] = useLoginUserMutation();
 
-  const [loginUser, { isLoading }] = useLoginUserMutation();
-
-  console.log({ isLoading });
+  console.log({ isLoading, data });
 
   const onSubmit = handleSubmit(async ({ email, password }) => {
-    // const response = await axios({
-    //   url: '/api/user/login',
-    //   method: 'post',
-    //   data: {
-    //     email,
-    //     password,
-    //   },
-    // });
-
-    const response = await loginUser({
+    await loginUser({
       email,
       password,
     });
-
-    console.log({ response });
-
-    // if (response.data.authToken) {
-    //   console.log('response.data.authToken', response.data.authToken);
-
-    //   navigate('/app');
-    // }
   });
+
+  // if (data?.authToken) {
+  //   navigate('/app');
+  // }
 
   return (
     <Form onSubmit={onSubmit}>

@@ -1,4 +1,4 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 type User = {
   _id: string;
@@ -23,7 +23,16 @@ const initialState: AuthState = {
 export const authSlice = createSlice({
   name: 'auth',
   initialState,
-  reducers: {},
+  reducers: {
+    logout: () => initialState,
+    setUser: (state, action: PayloadAction<any>) => {
+      state.user = action.payload;
+      state.isAuth = true;
+    },
+    setAuthToken: (state, action: PayloadAction<string>) => {
+      state.authToken = action.payload;
+    },
+  },
 });
 
 // Action creators are generated for each case reducer function

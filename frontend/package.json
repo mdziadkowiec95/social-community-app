@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@chakra-ui/react": "^2.4.9",
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
     "@reduxjs/toolkit": "^1.8.6",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
@@ -12,6 +15,7 @@
     "@types/react": "^18.0.10",
     "@types/react-dom": "^18.0.5",
     "axios": "^1.1.1",
+    "framer-motion": "^9.0.1",
     "i18next": "^21.10.0",
     "i18next-browser-languagedetector": "^6.1.6",
     "i18next-http-backend": "^1.4.4",

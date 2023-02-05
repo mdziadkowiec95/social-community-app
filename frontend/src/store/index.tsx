@@ -9,6 +9,7 @@ export const store = configureStore({
     auth: authReducer,
     [authApi.reducerPath]: authApi.reducer,
   },
+  middleware: (getDefaultMiddleware) => getDefaultMiddleware({}).concat([authApi.middleware]),
 });
 
 export const StoreProvider = ({ children }: { children: React.ReactNode }) => (
