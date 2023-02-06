@@ -1,4 +1,0 @@
-{
-  "using": "css selector",
-  "value": "[data-testid='create-new-account-button']"
-}
