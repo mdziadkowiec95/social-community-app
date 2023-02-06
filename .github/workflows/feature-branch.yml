@@ -18,8 +18,12 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
-      - name: Create mongoDB Docker container for API testing
+      - name: Create mongo Docker container
+        id: build_mongo_docker
         uses: DigiPie/mongo-action@v1.0.1
+        with:
+          image-version: latest
+          port: 27017
       - name: Test mongo connection
         id: test_mongo_connection
         run: 'sudo mongo localhost:27017'
@@ -44,8 +48,12 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
-      - name: Create mongoDB Docker container for API testing
+      - name: Create mongo Docker container
+        id: build_mongo_docker
         uses: DigiPie/mongo-action@v1.0.1
+        with:
+          image-version: latest
+          port: 27017
       - name: Test mongo connection
         id: test_mongo_connection
         run: 'sudo mongo localhost:27017'
