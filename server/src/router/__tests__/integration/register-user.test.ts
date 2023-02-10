@@ -20,7 +20,7 @@ describe('Register user route', () => {
 
   it('register new user - happy path', async () => {
     const { body } = await request(createApp())
-      .post('/api/user/register')
+      .post('/api/v1/user/register')
       .send({
         email: 'user1_integration_test@mailinator.pl',
         firstName: 'User 1',

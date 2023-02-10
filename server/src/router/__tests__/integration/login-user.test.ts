@@ -35,7 +35,7 @@ describe('Login user route', () => {
     await newUser.save();
 
     // Test login
-    const response = await request(createApp()).post('/api/user/login').send({
+    const response = await request(createApp()).post('/api/v1/user/login').send({
       email: 'login-user-integration-1@mailinator.pl',
       password: '12341234',
     });
