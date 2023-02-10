@@ -47,7 +47,7 @@ export const LoginForm = () => {
         />
         {/* <FormHelperText>{'Well never share your email.'}</FormHelperText> */}
       </FormControl>
-      <Button colorScheme='blue' type='submit'>
+      <Button colorScheme='blue' type='submit' data-testid='login-form-submit-button'>
         Log in
       </Button>
     </form>
