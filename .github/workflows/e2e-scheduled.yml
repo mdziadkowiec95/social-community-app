@@ -32,4 +32,4 @@ jobs:
           CI: true
       - run: cd e2e && npm run test:ci
         env:
-          E2E_BASE_URL: https://social-community-app-dev.herokuapp.com
+          E2E_BASE_URL: https://spaceedo-dev.onrender.com/
