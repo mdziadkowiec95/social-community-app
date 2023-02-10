@@ -25,6 +25,7 @@ export const authSlice = createSlice({
   initialState,
   reducers: {
     logout: () => initialState,
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     setUser: (state, action: PayloadAction<any>) => {
       state.user = action.payload;
       state.isAuth = true;
