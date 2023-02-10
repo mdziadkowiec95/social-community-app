@@ -1,10 +1,10 @@
 /* eslint-disable @typescript-eslint/ban-types */
 import express from 'express';
-import { userController } from '../controllers/user.controller';
-import { authenticateUser } from '../middlewares/authenticateUser';
-import { makeValidator, validators } from '../validators';
-import { withAuth } from './helpers';
-import { AuthenticateUserRequest } from './user.types';
+import { userController } from '../../controllers/user.controller';
+import { authenticateUser } from '../../middlewares/authenticateUser';
+import { makeValidator, validators } from '../../validators';
+import { withAuth } from '../helpers';
+import { AuthenticateUserRequest } from '../user.types';
 
 const router = express.Router();
 

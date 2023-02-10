@@ -3,7 +3,7 @@ import { Space, SpaceType } from '../models/Space.model';
 import { DocumentType } from './api.types';
 import { Empty } from './common.types';
 
-type CreateSpaceBody = {
+export type CreateSpaceBody = {
   name: string;
   type: SpaceType;
 };

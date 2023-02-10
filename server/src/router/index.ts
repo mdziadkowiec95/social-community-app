@@ -1,5 +1,5 @@
-import { userRouter } from './user.routes';
-import { spacesRouter } from './space.routes';
+import { userRouter } from './v1/user.routes';
+import { spacesRouter } from './v1/space.routes';
 
 const router = {
   user: userRouter,
