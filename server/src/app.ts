@@ -8,7 +8,7 @@ function createApp() {
 
   app.use(express.json());
   app.use('/api/user', router.user);
-  app.use('/api/spaces', router.space);
+  app.use('/api/spaces', router.spaces);
 
   if (config.isProduction()) {
     const frontendBuildPath = path.resolve(__dirname, path.join('../../', 'frontend', 'build'));

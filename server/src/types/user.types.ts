@@ -3,3 +3,9 @@ export interface UserJWTPayload {
     id: string;
   };
 }
+
+export type WithAuth<R> = R & {
+  user: {
+    id: string;
+  };
+};

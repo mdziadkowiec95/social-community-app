@@ -6,14 +6,10 @@ import { makeValidator, validators } from '../validators';
 import { withAuth } from './helpers';
 import { AuthenticateUserRequest } from './user.types';
 
-function createUserRouter() {
-  const router = express.Router();
+const router = express.Router();
 
-  router.post('/register', [makeValidator(validators.user.NewUserInputValidator)], userController.createNewUser);
-  router.post('/login', [makeValidator(validators.user.SignInInputValidator)], userController.loginUser);
-  router.get('/auth', [authenticateUser], withAuth<AuthenticateUserRequest>(userController.authenticateUser));
+router.post('/register', [makeValidator(validators.user.NewUserInputValidator)], userController.createNewUser);
+router.post('/login', [makeValidator(validators.user.SignInInputValidator)], userController.loginUser);
+router.get('/auth', [authenticateUser], withAuth<AuthenticateUserRequest>(userController.authenticateUser));
 
-  return router;
-}
-
-export { createUserRouter };
+export { router as userRouter };

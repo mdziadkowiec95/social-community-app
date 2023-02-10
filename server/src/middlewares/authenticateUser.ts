@@ -1,7 +1,7 @@
 import { NextFunction, Request, Response } from 'express';
-import { WithAuth } from '../router/user.types';
 import { LoggerService } from '../services/logger.service';
 import { userService } from '../services/user.service';
+import { WithAuth } from '../types/user.types';
 import { getErrorResponse } from '../utilities/error-handling';
 
 async function authenticateUser(req: Request, res: Response, next: NextFunction) {

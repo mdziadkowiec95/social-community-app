@@ -1,6 +1,12 @@
 import { model, Schema } from 'mongoose';
 import { ObjectIdType } from './schema-types';
 
+export type SpaceMember = {
+  user: string;
+  spaceId: string;
+  permissions: SpacePermissions[];
+};
+
 // Keep permissions here
 export enum SpacePermissions {
   MEMBER_ADD = 'MEMBER.ADD',
@@ -14,12 +20,14 @@ export enum SpacePermissions {
   POST_DELETE = 'POST.DELETE', // Relates only to deleting not owned posts (own posts can be always deleted)
 }
 
-// Permissions used by default when inviting new user
-export const basicSpaceMemberPermissions = [SpacePermissions.POST_ADD, SpacePermissions.POST_VIEW];
-// Permissions used when creating new space (for the creator user)
-export const creatorSpaceMemberPermissions = [...Object.values(SpacePermissions)];
+export const SPACE_PERMISSIONS_GROUP = {
+  // Permissions used by default when inviting new user
+  BASIC: [SpacePermissions.POST_ADD, SpacePermissions.POST_VIEW],
+  // Permissions used when creating new space (for the creator user)
+  CREATOR: [...Object.values(SpacePermissions)],
+} as const;
 
-const spaceMemberSchema = new Schema(
+const spaceMemberSchema = new Schema<SpaceMember>(
   {
     user: { type: ObjectIdType, ref: 'User', required: true },
     spaceId: { type: ObjectIdType, ref: 'Space', required: true },
@@ -43,6 +51,6 @@ spaceMemberSchema.path('permissions').validate((permissions: SpacePermissions[])
   return !isInvalidPermission;
 });
 
-const SpaceMember = model('SpaceMember', spaceMemberSchema);
+const SpaceMemberModel = model('SpaceMember', spaceMemberSchema);
 
-export { SpaceMember };
+export { SpaceMemberModel };
