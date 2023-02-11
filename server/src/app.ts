@@ -2,6 +2,7 @@ import express from 'express';
 import path from 'path';
 import { router } from './router';
 import { config } from './config';
+import { initDocs } from './docs';
 
 function createApp() {
   const app = express();
@@ -9,6 +10,8 @@ function createApp() {
   app.use(express.json());
   app.use('/api/v1/user', router.user);
   app.use('/api/v1/spaces', router.spaces);
+
+  initDocs(app);
 
   if (config.isProduction()) {
     const frontendBuildPath = path.resolve(__dirname, path.join('../../', 'frontend', 'build'));
