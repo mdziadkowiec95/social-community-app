@@ -1,4 +1,5 @@
-import { Request } from 'express';
+import type { Request } from 'express';
+import { WithAuth } from '../types/user.types';
 
 type LoginUserBody = {
   email: string;
@@ -30,9 +31,3 @@ export type RegisterUserRequest = Request<Empty, LoginUserResponse, RegisterUser
 export type AuthenticateUserRequest = WithAuth<Request<Empty, AuthenticateUserResponse, Empty, Empty>>;
 
 export type UserRequests = LoginUserRequest | RegisterUserRequest | AuthenticateUserRequest;
-
-export type WithAuth<R> = R & {
-  user: {
-    id: string;
-  };
-};

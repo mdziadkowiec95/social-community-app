@@ -4,10 +4,6 @@ import { Container } from 'semantic-ui-react';
 import './App.css';
 
 export function Root() {
-  fetch('/api/user/login', {
-    method: 'post',
-  });
-
   return (
     <div>
       <Link to='join'>Join us</Link>

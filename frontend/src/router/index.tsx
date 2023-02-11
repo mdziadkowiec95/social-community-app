@@ -1,9 +1,11 @@
+import React from 'react';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { AppRoot } from '../pages/app/AppRoot';
 import Dashboard from '../pages/app/Dashboard';
 import { NonAuthRoot } from '../pages/non-auth/NonAuthRoot';
 import { JoinUs } from '../pages/non-auth/JoinUs';
 import { TermsOfUse } from '../pages/non-auth/TermsOfUse';
+import { PrivateRoute } from './components/PrivateRoute';
 
 const router = createBrowserRouter([
   {
@@ -23,7 +25,11 @@ const router = createBrowserRouter([
   },
   {
     path: '/app',
-    element: <AppRoot />,
+    element: (
+      <PrivateRoute>
+        <AppRoot />
+      </PrivateRoute>
+    ),
     children: [
       {
         path: 'dashboard',

@@ -4,13 +4,18 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 import { AppRouterProvider } from './router';
 import './i18n';
-// @TODO -> toe be fixed. Compilation error
-// https://github.com/Semantic-Org/Semantic-UI/issues/7073
-// import 'semantic-ui-css/semantic.min.css'
+import { StoreProvider } from './store';
+import { ChakraProvider } from '@chakra-ui/react';
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 
-root.render(<AppRouterProvider />);
+root.render(
+  <StoreProvider>
+    <ChakraProvider>
+      <AppRouterProvider />
+    </ChakraProvider>
+  </StoreProvider>,
+);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

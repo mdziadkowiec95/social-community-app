@@ -1,10 +1,9 @@
-import axios from 'axios';
 import React from 'react';
 import { useForm } from 'react-hook-form';
-import { useNavigate } from 'react-router';
-import { Button, Form } from 'semantic-ui-react';
+import { Button, FormControl, FormLabel, Input } from '@chakra-ui/react';
+import { useLoginUserMutation } from '../store/authApi';
 
-type InputFormFields = {
+type LoginFormFields = {
   email: string;
   password: string;
 };
@@ -14,48 +13,43 @@ export const LoginForm = () => {
     register,
     handleSubmit,
     // formState: { errors },
-  } = useForm<InputFormFields>();
-  const navigate = useNavigate();
+  } = useForm<LoginFormFields>();
+  const [loginUser] = useLoginUserMutation();
+
   const onSubmit = handleSubmit(async ({ email, password }) => {
-    const response = await axios({
-      url: '/api/user/login',
-      method: 'post',
-      data: {
-        email,
-        password,
-      },
+    await loginUser({
+      email,
+      password,
     });
-
-    if (response.data.authToken) {
-      console.log('response.data.authToken', response.data.authToken);
-
-      navigate('/app');
-    }
   });
 
   return (
-    <Form onSubmit={onSubmit}>
-      <Form.Field>
-        <input
+    <form onSubmit={onSubmit}>
+      <FormControl>
+        <FormLabel>Email address</FormLabel>
+        <Input
           type='email'
           placeholder='Email'
           aria-label='Email'
           data-testid='login-form-email-field'
           {...register('email')}
         />
-      </Form.Field>
-      <Form.Field>
-        <input
+        {/* <FormHelperText>{'Well never share your email.'}</FormHelperText> */}
+      </FormControl>
+      <FormControl>
+        <FormLabel>Password</FormLabel>
+        <Input
           type='password'
           placeholder='Password'
           aria-label='Password'
           data-testid='login-form-password-field'
           {...register('password')}
         />
-      </Form.Field>
-      <Button type='submit' primary data-testid='login-form-submit-button'>
+        {/* <FormHelperText>{'Well never share your email.'}</FormHelperText> */}
+      </FormControl>
+      <Button colorScheme='blue' type='submit' data-testid='login-form-submit-button'>
         Log in
       </Button>
-    </Form>
+    </form>
   );
 };
