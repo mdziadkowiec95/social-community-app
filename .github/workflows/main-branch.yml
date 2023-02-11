@@ -18,11 +18,21 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
-      - name: Create mongoDB Docker container for API testing
-        uses: DigiPie/mongo-action@v1.0.1
+      - name: Install mongosh
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y wget gnupg
+          wget -qO - https://www.mongodb.org/static/pgp/server-6.0.asc | sudo apt-key add -
+          echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu jammy/mongodb-org/6.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-6.0.list
+          sudo apt-get update
+          sudo apt-get install -y mongodb-mongosh
+      - name: Create mongo Docker container
+        uses: DigiPie/mongo-action@v2.0.0
+        with:
+          image_version: latest
+          port: 27017
       - name: Test mongo connection
-        id: test_mongo_connection
-        run: 'sudo mongo localhost:27017'
+        run: 'sudo mongosh localhost:27017'
       - run: cd server && npm i
       - run: cd frontend && npm i
       - run: npm test
@@ -44,11 +54,21 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
-      - name: Create mongoDB Docker container for API testing
-        uses: DigiPie/mongo-action@v1.0.1
+      - name: Install mongosh
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y wget gnupg
+          wget -qO - https://www.mongodb.org/static/pgp/server-6.0.asc | sudo apt-key add -
+          echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu jammy/mongodb-org/6.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-6.0.list
+          sudo apt-get update
+          sudo apt-get install -y mongodb-mongosh
+      - name: Create mongo Docker container
+        uses: DigiPie/mongo-action@v2.0.0
+        with:
+          image_version: latest
+          port: 27017
       - name: Test mongo connection
-        id: test_mongo_connection
-        run: 'sudo mongo localhost:27017'
+        run: 'sudo mongosh localhost:27017'
       - run: npm install
       - run: npm run build-ci
       - run: npm run start-server-for-e2e
