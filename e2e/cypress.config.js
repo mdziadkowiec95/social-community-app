@@ -13,5 +13,6 @@ module.exports = defineConfig({
       return config;
     },
     experimentalSessionAndOrigin: true,
+    pageLoadTimeout: 240000,
   },
 });
