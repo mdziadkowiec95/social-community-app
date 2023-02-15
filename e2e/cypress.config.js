@@ -14,5 +14,6 @@ module.exports = defineConfig({
     },
     experimentalSessionAndOrigin: true,
     pageLoadTimeout: 240000,
+    responseTimeout: 240000
   },
 });
