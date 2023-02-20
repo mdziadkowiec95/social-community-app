@@ -27,7 +27,7 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y mongodb-mongosh
       - name: Create mongo Docker container
-        uses: DigiPie/mongo-action@v2.0.0
+        uses: DigiPie/mongo-action@v2.0.1
         with:
           image_version: latest
           port: 27017
